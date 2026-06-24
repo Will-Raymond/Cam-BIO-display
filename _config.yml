@@ -1,0 +1,68 @@
+# ── CamBio showcase site ──────────────────────────────────────────────────
+title: CamBio
+subtitle: Voice-controlled OpenTrons Flex lab assistant
+description: >-
+  CamBio is a walk-up conversational interface for the OpenTrons Flex robot —
+  describe your experiment out loud and it designs, validates, and runs the
+  protocol, hands-free.
+locale: en-US
+
+# Published at https://will-raymond.github.io/cambio/
+url: "https://will-raymond.github.io"
+baseurl: "/cambio"
+repository: cdsnow/cambio
+
+# Theme (remote — no gem vendoring; supported by GitHub Pages)
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "sunrise"
+search: true
+
+# Author / footer
+author:
+  name: "Chris Snow / Will RAymond"
+  bio: "OpenTrons Flex automation · Colorado State University"
+  location: "Colorado State University"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cdsnow"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+include:
+  - _pages
+
+# Treat _pages as first-class pages
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Default front matter
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: false
+      sidebar:
+        nav: "main"
+  # posts (unused for now, kept for completeness)
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
