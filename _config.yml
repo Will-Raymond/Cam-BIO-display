@@ -12,7 +12,7 @@ url: "https://will-raymond.github.io"
 baseurl: "/cambio"
 repository: cdsnow/cambio
 
-# Theme (remote — no gem vendoring; supported by GitHub Pages)
+# Theme -- local editied version of minimal mistakes to match csu branding
 theme: "minimal-mistakes-jekyll"
 minimal_mistakes_skin: "csu"
 search: true

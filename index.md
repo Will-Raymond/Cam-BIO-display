@@ -5,7 +5,7 @@ title: "Cam-BIO"
 header:
   overlay_color: "#2a5490"
   overlay_filter: "0.55"
-  overlay_image: /assets/images/hero-deck.jpg
+  overlay_image: /assets/images/deckphoto.jpg
   actions:
     - label: "Explore Features"
       url: /features/

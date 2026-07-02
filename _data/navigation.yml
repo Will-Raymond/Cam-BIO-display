@@ -2,13 +2,13 @@
 main:
   - title: "Home"
     url: /
-  - title: "Features"
-    url: /features/
   - title: "Roadmap"
     url: /roadmap/
+  - title: "Experiments"
+    url: /experiments/
   - title: "Publications"
     url: /publications/
-  - title: "GitHub"
-    url: https://github.com/cdsnow
+  - title: "Media"
+    url: /media/
   - title: "Contact"
     url: /contact/

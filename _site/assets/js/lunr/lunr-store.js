@@ -1,20 +1,20 @@
 var store = [{
-        "title": "About",
-        "excerpt":"What is Cam-BIO? Cam-BIO is a voice-controlled lab assistant for the OpenTrons Flex liquid-handling robot. Instead of writing and uploading scripts by hand, researchers describe an experiment in plain language and CamBio handles the rest — designing the protocol, checking the deck, validating, performing a narrated dry run, and executing...","categories": [],
-        "tags": [],
-        "url": "/cambio/about/",
-        "teaser": null
-      },{
         "title": "Contact us",
         "excerpt":"If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below.   Email us at cambio@colostate.edu []   Individual Contact information   Will Raymond                                                                  Contact Us                      Lorem ipsum dolor sit amet consectetur.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Send Message                                                                                                                         See the roadmap →  ","categories": [],
         "tags": [],
         "url": "/cambio/contact/",
         "teaser": null
       },{
-        "title": "Features",
-        "excerpt":"WIP   See the roadmap →  ","categories": [],
+        "title": "Experiments library",
+        "excerpt":"Automated Protein Crystallization   Cell-free Translation   Duckweed Growth   Protein Purification  ","categories": [],
         "tags": [],
-        "url": "/cambio/features/",
+        "url": "/cambio/experiments/",
+        "teaser": null
+      },{
+        "title": "Media",
+        "excerpt":"                                                  Photos of the setup      ","categories": [],
+        "tags": [],
+        "url": "/cambio/media/",
         "teaser": null
       },{
         "title": "Publications",
