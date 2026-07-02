@@ -1,6 +1,6 @@
 # ── CamBio showcase site ──────────────────────────────────────────────────
-title: CamBio
-subtitle: Voice-controlled OpenTrons Flex lab assistant
+title: Cam-BIO
+subtitle: Continuous Agentic Molecular Biology Investigator/Operator 
 description: >-
   CamBio is a walk-up conversational interface for the OpenTrons Flex robot —
   describe your experiment out loud and it designs, validates, and runs the
@@ -13,8 +13,8 @@ baseurl: "/cambio"
 repository: cdsnow/cambio
 
 # Theme (remote — no gem vendoring; supported by GitHub Pages)
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "sunrise"
+theme: "minimal-mistakes-jekyll"
+minimal_mistakes_skin: "csu"
 search: true
 
 # Author / footer

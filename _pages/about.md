@@ -3,9 +3,9 @@ title: "About"
 permalink: /about/
 ---
 
-## What is CamBio?
+## What is Cam-BIO?
 
-CamBio is a voice-controlled lab assistant for the [OpenTrons Flex](https://opentrons.com/)
+Cam-BIO is a voice-controlled lab assistant for the [OpenTrons Flex](https://opentrons.com/)
 liquid-handling robot. Instead of writing and uploading scripts by hand,
 researchers describe an experiment in plain language and CamBio handles the rest
 — designing the protocol, checking the deck, validating, performing a narrated
@@ -18,7 +18,7 @@ WIP
 
 ## Who's behind it
 
-CamBio is developed by ** Dr. Chris Snow** at **Colorado State University**, with
+Cam-BIO is developed by ** Dr. Chris Snow** at **Colorado State University**, with
 contributions from **Dr. William Raymond**.
 
 ## Get in touch

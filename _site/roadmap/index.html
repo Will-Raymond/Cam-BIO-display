@@ -9,30 +9,30 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<html lang="en-US" class="no-js" dir="ltr">
+<html lang="en-US" class="no-js">
   <head>
     
 <meta charset="utf-8">
 
 
-<!-- begin _includes/seo.html --><title>Roadmap - CamBio</title>
-<meta name="description" content="The long-term vision is a walk-up conversational interface for the OpenTrons Flex robot, where researchers describe what they want to do and the system handles protocol design, validation, dry-run confirmation, and execution — hands-free.">
+<!-- begin _includes/seo.html --><title>Roadmap - Cam-BIO</title>
+<meta name="description" content="WIP">
 
 
-  <meta name="author" content="Chris Snow">
+  <meta name="author" content="Chris Snow / Will RAymond">
   
-  <meta property="article:author" content="Chris Snow">
+  <meta property="article:author" content="Chris Snow / Will RAymond">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="CamBio">
+<meta property="og:site_name" content="Cam-BIO">
 <meta property="og:title" content="Roadmap">
 <meta property="og:url" content="http://localhost:4000/cambio/roadmap/">
 
 
-  <meta property="og:description" content="The long-term vision is a walk-up conversational interface for the OpenTrons Flex robot, where researchers describe what they want to do and the system handles protocol design, validation, dry-run confirmation, and execution — hands-free.">
+  <meta property="og:description" content="WIP">
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-  <meta property="article:published_time" content="2026-06-22T15:23:22-06:00">
+  <meta property="article:published_time" content="2026-07-02T14:33:17-06:00">
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-  <link href="/cambio/feed.xml" type="application/atom+xml" rel="alternate" title="CamBio Feed">
+  <link href="/cambio/feed.xml" type="application/atom+xml" rel="alternate" title="Cam-BIO Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -89,7 +89,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--single" dir="ltr">
     
 <nav class="skip-links" aria-label="Skip links">
   <ul>
@@ -108,8 +108,8 @@
       <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/cambio/">
-          CamBio
-          <span class="site-subtitle">Voice-controlled OpenTrons Flex lab assistant</span>
+          Cam-BIO
+          <span class="site-subtitle">Continuous Agentic Molecular Biology Investigator/Operator</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a
@@ -257,7 +257,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Roadmap">
-    <meta itemprop="description" content="The long-term vision is a walk-up conversational interface for the OpenTronsFlex robot, where researchers describe what they want to do and the systemhandles protocol design, validation, dry-run confirmation, and execution —hands-free.">
+    <meta itemprop="description" content="WIP">
     
     
 
@@ -280,80 +280,11 @@
           <aside class="sidebar__right sticky">
             <nav class="toc" aria-label="Table of contents">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Initiatives</h4></header>
-              <ul class="toc__menu"><li><a href="#protocol-library-with-llm-ready-metadata">Protocol library with LLM-ready metadata</a></li><li><a href="#camera-monitoring">Camera monitoring</a></li><li><a href="#inventory-tracking">Inventory tracking</a></li><li><a href="#voice-interface">Voice interface</a></li><li><a href="#labware-offset-tracking">Labware offset tracking</a></li><li><a href="#walk-up-conversational-protocol-design">Walk-up conversational protocol design</a></li><li><a href="#user-training">User training</a></li></ul>
+              
             </nav>
           </aside>
         
-        <p>The long-term vision is a walk-up conversational interface for the OpenTrons
-Flex robot, where researchers describe what they want to do and the system
-handles protocol design, validation, dry-run confirmation, and execution —
-hands-free.</p>
-
-<p>Here’s where each major initiative stands.</p>
-
-<h2 id="protocol-library-with-llm-ready-metadata">Protocol library with LLM-ready metadata</h2>
-<p><strong>Status: Done</strong></p>
-
-<p>A growing library of working scripts with enough metadata to bundle related
-examples into future assistant calls (few-shot learning) — an indexed catalog
-with an extended metadata schema and retrieval built in.</p>
-
-<p><em>Next:</em> grow the tested library across more techniques; have the assistant
-auto-select few-shot examples when writing new protocols.</p>
-
-<h2 id="camera-monitoring">Camera monitoring</h2>
-<p><strong>Status: In progress</strong></p>
-
-<p>Tighter communication between the robot and our tools so we can see what’s
-happening on the deck — still capture and a live stream are working.</p>
-
-<p><em>Next:</em> deeper vision interpretation (liquid levels), camera-driven inventory
-confidence, and a second angle for side monitoring.</p>
-
-<h2 id="inventory-tracking">Inventory tracking</h2>
-<p><strong>Status: Done</strong></p>
-
-<p>An independent inventory of labware, tips, and pipettes — on-deck and in
-storage — tracking contents with confidence values that decay over time.</p>
-
-<p><em>Next:</em> auto-update inventory after runs; camera-assisted confidence; broader
-consumable tracking.</p>
-
-<h2 id="voice-interface">Voice interface</h2>
-<p><strong>Status: Done</strong></p>
-
-<p>Text-to-speech and speech-to-text so the system can query users verbally,
-confirm assumptions, and update inventory through conversation.</p>
-
-<p><em>Next:</em> hands-free wake word / push-to-talk, streaming TTS, and voice-driven
-inventory corrections.</p>
-
-<h2 id="labware-offset-tracking">Labware offset tracking</h2>
-<p><strong>Status: In progress</strong></p>
-
-<p>Track calibration offsets so protocols use correct positions, with proactive
-warnings about uncalibrated labware.</p>
-
-<p><em>Next:</em> local caching of calibrated labware and offset status surfaced in deck
-queries.</p>
-
-<h2 id="walk-up-conversational-protocol-design">Walk-up conversational protocol design</h2>
-<p><strong>Status: In progress</strong></p>
-
-<p>The full loop: describe an experiment, get clarifying questions, design against
-the library, validate, dry-run with narration, confirm, run, and update
-inventory.</p>
-
-<p><em>Next:</em> a narrated dry-run mode and an end-to-end test of the complete loop.</p>
-
-<h2 id="user-training">User training</h2>
-<p><strong>Status: In progress</strong></p>
-
-<p>Recognize new versus returning users and offer guided onboarding — vocabulary,
-the software tools, and a walk-through of a first protocol.</p>
-
-<p><em>Next:</em> fuller guided setup and multi-user awareness, eventually recognizing
-users by face and/or voice.</p>
+        <p>WIP</p>
 
         
       </section>
@@ -440,7 +371,7 @@ users by face and/or voice.</p>
 </div>
 
 
-<div class="page__footer-copyright">&copy; 2026 <a href="http://localhost:4000">CamBio</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 <a href="http://localhost:4000">Cam-BIO</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -20,6 +20,8 @@ Will Raymond
 
 
 
+{% include contact.html %}
+
 
 [See the roadmap →]({{ "/roadmap/" | relative_url }})
 {: .notice--info}
