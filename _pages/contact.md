@@ -5,24 +5,19 @@ toc: true
 toc_label: "On this page"
 toc_sticky: true
 
-feature_row:
-  - image_path: /assets/images/photo_placeholder.png
+gallery:
+  - image_path: /assets/images/chris_snow.jpg
     alt: "Photo of Dr. Christopher Snow"
     title: "Dr. Chris Snow"
-    excerpt: "Team member bio"
-  - image_path: /assets/images/photo_placeholder.png
+  - image_path: /assets/images/brian_geiss.jpg
     alt: "Photo of Dr. Brian Geiss"
     title: "Dr. Brian Geiss"
-    excerpt: "Team member bio"
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--inverse"
-  - image_path: /assets/images/photo_placeholder.png
+  - image_path: /assets/images/tim_stasevich.png
     alt: "Photo of Dr. Tim Stasevich"
     title: "Dr. Tim Stasevich"
-    exerpt: "Team member bio"
+
 feature_row2:
-  - image_path: /assets/images/photo_placeholder.png
+  - image_path: /assets/images/wsr_c.png
     alt: "Photo of Dr. Will Raymond"
     title: "Dr. Will Raymond"
     exerpt: "Team member bio"   
@@ -31,17 +26,45 @@ feature_row2:
 
 If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below.
 
-Email us at cambio@colostate.edu
-[]
+Email us at cambio@colostate.edu - NOT SET UP YET
 
 
-Tag-Team 
+## Tag Team
 
-{% include feature_row type="left" %}
+<figure class="half" style="justify-content: space-around;">
+        <img src="/cambio/assets/images/chris_snow.jpg" alt="Photo of Dr. Christopher Snow" style="border-radius: 1%;"> 
+        <div style="min-width: 400px;">
+            <h2> Dr. Chris Snow </h2>
+            <p> Bio </p>
+            <a class="btn btn--primary .btn--large" href="https://www.engr.colostate.edu/bce/people/chris-snow/"> See more </a>
+        </div>
+        <img src="/cambio/assets/images/brian_geiss.jpg" alt="Photo of Dr. Brian Geiss" style="border-radius: 1%;">
+        <div style="min-width: 400px;">
+            <h2> Dr. Brian Geiss </h2>
+            <p> Bio </p>
+            <a class="btn btn--primary .btn--large" href="https://vetmedbiosci.colostate.edu/directory/member/?id=brian-geiss-3203"> See more </a>
+        </div>
+        <img src="/cambio/assets/images/tim_stasevich.png" alt="Photo of Dr. Tim Stasevich" style="border-radius: 1%;">
+        <div style="min-width: 400px;">
+            <h2> Dr. Tim Stasevich </h2>
+            <p> Bio </p>
+            <a class="btn btn--primary .btn--large" href="https://stasevichlab.colostate.edu/"> See more </a>
+        </div>
+</figure>
 
-Cam-BIO team
 
-{% include feature_row id="feature_row2" type="left" %}
+
+## Cam-BIO team
+
+<figure class="half" style="justify-content: space-around;">
+        <img src="/cambio/assets/images/wsr_photo3.png" alt="Photo of Dr. Will Raymond" style="border-radius: 1%;"> 
+        <div style="min-width: 400px;">
+            <h2> Dr. Will Raymond </h2>
+            <p> Bio </p>
+            <a class="btn btn--primary .btn--large" href="https://will-raymond.github.io/will_raymond_cv/"> See more </a>
+        </div>
+</figure>
+
 
 <a href="mailto:wsraymon@rams.colostate.edu">
 

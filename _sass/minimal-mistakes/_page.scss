@@ -424,6 +424,12 @@
   }
 }
 
+.page__rounded-image{
+  border-radius: 50%;
+  width:200px; 
+  height: auto;
+}
+
 .page__related-title {
   margin-bottom: 10px;
   font-size: $type-size-6;

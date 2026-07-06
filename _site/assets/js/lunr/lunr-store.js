@@ -1,6 +1,6 @@
 var store = [{
         "title": "Contact us",
-        "excerpt":"If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below. Email us at cambio@colostate.edu [] Tag-Team Dr. Chris Snow Team member bio Dr. Brian Geiss Team member bio Read More Dr. Tim Stasevich Cam-BIO team Dr....","categories": [],
+        "excerpt":"If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below. Email us at cambio@colostate.edu - NOT SET UP YET Tag Team Dr. Chris Snow Bio See more Dr. Brian Geiss Bio See more Dr. Tim Stasevich...","categories": [],
         "tags": [],
         "url": "/cambio/contact/",
         "teaser": null
