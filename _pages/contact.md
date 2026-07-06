@@ -32,13 +32,13 @@ Email us at cambio@colostate.edu - NOT SET UP YET
 ## Tag Team
 
 <figure class="half" style="justify-content: space-around;">
-        <img src="/cambio/assets/images/chris_snow.jpg" alt="Photo of Dr. Christopher Snow" style="border-radius: 1%;"> 
+        <img src="../assets/images/chris_snow.jpg" alt="Photo of Dr. Christopher Snow" style="border-radius: 1%;"> 
         <div style="min-width: 400px;">
             <h2> Dr. Chris Snow </h2>
             <p> Bio </p>
             <a class="btn btn--primary .btn--large" href="https://www.engr.colostate.edu/bce/people/chris-snow/"> See more </a>
         </div>
-        <img src="/cambio/assets/images/brian_geiss.jpg" alt="Photo of Dr. Brian Geiss" style="border-radius: 1%;">
+        <img src="../assets/images/brian_geiss.jpg" alt="Photo of Dr. Brian Geiss" style="border-radius: 1%;">
         <div style="min-width: 400px;">
             <h2> Dr. Brian Geiss </h2>
             <p> Bio </p>
@@ -57,7 +57,7 @@ Email us at cambio@colostate.edu - NOT SET UP YET
 ## Cam-BIO team
 
 <figure class="half" style="justify-content: space-around;">
-        <img src="/cambio/assets/images/wsr_photo3.png" alt="Photo of Dr. Will Raymond" style="border-radius: 1%;"> 
+        <img src="../assets/images/wsr_photo3.png" alt="Photo of Dr. Will Raymond" style="border-radius: 1%;"> 
         <div style="min-width: 400px;">
             <h2> Dr. Will Raymond </h2>
             <p> Bio </p>
