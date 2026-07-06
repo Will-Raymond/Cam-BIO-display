@@ -449,9 +449,9 @@ tr, td, th { vertical-align: middle; }
 .btn--danger { background-color: #ee5f5b; color: #fff; }
 .btn--danger:visited { background-color: #ee5f5b; color: #fff; }
 .btn--danger:hover { background-color: #be4c49; color: #fff; }
-.btn--info { background-color: #3b9cba; color: #fff; }
-.btn--info:visited { background-color: #3b9cba; color: #fff; }
-.btn--info:hover { background-color: #2f7d95; color: #fff; }
+.btn--info { background-color: #CFFC00; color: #0e2431; }
+.btn--info:visited { background-color: #CFFC00; color: #0e2431; }
+.btn--info:hover { background-color: #a6ca00; color: #fff; }
 .btn--bluesky { background-color: #1083fe; color: #fff; }
 .btn--bluesky:visited { background-color: #1083fe; color: #fff; }
 .btn--bluesky:hover { background-color: #0d69cb; color: #fff; }
@@ -480,7 +480,7 @@ tr, td, th { vertical-align: middle; }
 /* ========================================================================== NOTICE TEXT BLOCKS ========================================================================== */
 /** Default Kramdown usage (no indents!): <div class="notice" markdown="1"> #### Headline for the Notice Text for the notice </div> */
 /* Default notice */
-.notice, .markdown-alert { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #eff0f0; border-radius: 4px; box-shadow: 0 1px 1px rgba(189, 193, 196, 0.25); }
+.notice, .markdown-alert { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #bdc1c4; border-radius: 4px; box-shadow: 0 1px 1px rgba(189, 193, 196, 0.25); }
 .notice h4, .markdown-alert h4 { margin-top: 0 !important; /* override*/ margin-bottom: 0.75em; line-height: inherit; }
 .page__content .notice, .markdown-alert h4 { /* using at-root to override .page-content h4 font size*/ margin-bottom: 0; font-size: 1em; }
 .notice p:last-child, .markdown-alert p:last-child { margin-bottom: 0 !important; /* override*/ }
@@ -493,7 +493,7 @@ blockquote.notice, blockquote.markdown-alert { border-inline-start-color: #aaaeb
 .notice ul:last-child, .markdown-alert ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Primary notice */
-.notice--primary, .markdown-alert-important { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #dfd4dd; border-radius: 4px; box-shadow: 0 1px 1px rgba(126, 84, 117, 0.25); }
+.notice--primary, .markdown-alert-important { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #7e5475; border-radius: 4px; box-shadow: 0 1px 1px rgba(126, 84, 117, 0.25); }
 .notice--primary h4, .markdown-alert-important h4 { margin-top: 0 !important; /* override*/ margin-bottom: 0.75em; line-height: inherit; }
 .page__content .notice--primary, .markdown-alert-important h4 { /* using at-root to override .page-content h4 font size*/ margin-bottom: 0; font-size: 1em; }
 .notice--primary p:last-child, .markdown-alert-important p:last-child { margin-bottom: 0 !important; /* override*/ }
@@ -506,20 +506,20 @@ blockquote.notice--primary, blockquote.markdown-alert-important { border-inline-
 .notice--primary ul:last-child, .markdown-alert-important ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Info notice */
-.notice--info, .markdown-alert-note { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #cee6ee; border-radius: 4px; box-shadow: 0 1px 1px rgba(59, 156, 186, 0.25); }
+.notice--info, .markdown-alert-note { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #cffc00; border-radius: 4px; box-shadow: 0 1px 1px rgba(207, 252, 0, 0.25); }
 .notice--info h4, .markdown-alert-note h4 { margin-top: 0 !important; /* override*/ margin-bottom: 0.75em; line-height: inherit; }
 .page__content .notice--info, .markdown-alert-note h4 { /* using at-root to override .page-content h4 font size*/ margin-bottom: 0; font-size: 1em; }
 .notice--info p:last-child, .markdown-alert-note p:last-child { margin-bottom: 0 !important; /* override*/ }
 .notice--info h4 + p, .markdown-alert-note h4 + p { /* remove space above paragraphs that appear directly after notice headline*/ margin-top: 0; padding-top: 0; }
-.notice--info a, .markdown-alert-note a { color: #358ca7; }
-.notice--info a:hover, .markdown-alert-note a:hover { color: #1e4e5d; }
-blockquote.notice--info, blockquote.markdown-alert-note { border-inline-start-color: #358ca7; }
-.notice--info code, .markdown-alert-note code { background-color: #ebf5f8; }
+.notice--info a, .markdown-alert-note a { color: #bae300; }
+.notice--info a:hover, .markdown-alert-note a:hover { color: #687e00; }
+blockquote.notice--info, blockquote.markdown-alert-note { border-inline-start-color: #bae300; }
+.notice--info code, .markdown-alert-note code { background-color: #faffe6; }
 .notice--info pre code, .markdown-alert-note pre code { background-color: inherit; }
 .notice--info ul:last-child, .markdown-alert-note ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Warning notice */
-.notice--warning, .markdown-alert-warning { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #f5dfc1; border-radius: 4px; box-shadow: 0 1px 1px rgba(214, 127, 5, 0.25); }
+.notice--warning, .markdown-alert-warning { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #d67f05; border-radius: 4px; box-shadow: 0 1px 1px rgba(214, 127, 5, 0.25); }
 .notice--warning h4, .markdown-alert-warning h4 { margin-top: 0 !important; /* override*/ margin-bottom: 0.75em; line-height: inherit; }
 .page__content .notice--warning, .markdown-alert-warning h4 { /* using at-root to override .page-content h4 font size*/ margin-bottom: 0; font-size: 1em; }
 .notice--warning p:last-child, .markdown-alert-warning p:last-child { margin-bottom: 0 !important; /* override*/ }
@@ -532,7 +532,7 @@ blockquote.notice--warning, blockquote.markdown-alert-warning { border-inline-st
 .notice--warning ul:last-child, .markdown-alert-warning ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Success notice */
-.notice--success, .markdown-alert-tip { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #cfe9cf; border-radius: 4px; box-shadow: 0 1px 1px rgba(63, 166, 63, 0.25); }
+.notice--success, .markdown-alert-tip { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #3fa63f; border-radius: 4px; box-shadow: 0 1px 1px rgba(63, 166, 63, 0.25); }
 .notice--success h4, .markdown-alert-tip h4 { margin-top: 0 !important; /* override*/ margin-bottom: 0.75em; line-height: inherit; }
 .page__content .notice--success, .markdown-alert-tip h4 { /* using at-root to override .page-content h4 font size*/ margin-bottom: 0; font-size: 1em; }
 .notice--success p:last-child, .markdown-alert-tip p:last-child { margin-bottom: 0 !important; /* override*/ }
@@ -545,7 +545,7 @@ blockquote.notice--success, blockquote.markdown-alert-tip { border-inline-start-
 .notice--success ul:last-child, .markdown-alert-tip ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Danger notice */
-.notice--danger, .markdown-alert-caution { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #fbd7d6; border-radius: 4px; box-shadow: 0 1px 1px rgba(238, 95, 91, 0.25); }
+.notice--danger, .markdown-alert-caution { margin: 2em 0 !important; /* override*/ padding: 1em; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em !important; text-indent: initial; /* override*/ background-color: #ee5f5b; border-radius: 4px; box-shadow: 0 1px 1px rgba(238, 95, 91, 0.25); }
 .notice--danger h4, .markdown-alert-caution h4 { margin-top: 0 !important; /* override*/ margin-bottom: 0.75em; line-height: inherit; }
 .page__content .notice--danger, .markdown-alert-caution h4 { /* using at-root to override .page-content h4 font size*/ margin-bottom: 0; font-size: 1em; }
 .notice--danger p:last-child, .markdown-alert-caution p:last-child { margin-bottom: 0 !important; /* override*/ }
@@ -1000,7 +1000,7 @@ pre:hover .clipboard-copy-button { opacity: 1; }
 .page__content h2 { padding-bottom: 0.5em; border-bottom: 1px solid #cccccc; }
 .page__content p, .page__content li, .page__content dl { font-size: 1em; }
 .page__content p { margin: 0 0 1.3em; /* sibling indentation*/ }
-.page__content a:not(.btn):hover { text-decoration: underline; }
+.page__content a:not(.btn):hover { text-decoration: none; }
 .page__content a:not(.btn):hover img { box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
 .page__content dt { margin-top: 1em; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-weight: bold; }
 .page__content dd { margin-left: 1em; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em; }
