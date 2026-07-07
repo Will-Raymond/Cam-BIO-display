@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Experiments library",
-        "excerpt":"Below is our growing experimental protocol library available for automation!   Automated Protein Crystallization      Efficently explore multiple conditions of crystallization for a protein of interest or mass produce protein crystals for x-ray diffraction.   Cell-free Translation      Duckweed Growth      Protein Purification      Automated PCR     ","categories": [],
+        "excerpt":"Automated Protein Crystallization The growth of crystals is a valuable experiment for structure exploration and only occurs under very specific conditions that can be difficult to acheive, even in a lab setting. Because of this, crystals are grown in plates where concentrations can be iterated across a gradient in order...","categories": [],
         "tags": [],
         "url": "/cambio/experiments/",
         "teaser": null
