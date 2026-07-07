@@ -1,12 +1,12 @@
 var store = [{
-        "title": "Contact us",
-        "excerpt":"If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below. Email us at cambio@colostate.edu - NOT SET UP YET Tag Team Dr. Chris Snow Bio See more Dr. Brian Geiss Bio See more Dr. Tim Stasevich...","categories": [],
+        "title": "About us",
+        "excerpt":"We are an interdisciplenary team of scientists with backgrounds that range from Protein engineeiring, virology, fluorescence microscopy, machine learning, and RNA biology aiming to bring efficient and reproducible automated laboratory experiments to Colorado State University, and to the broader scientific world! Tag Team Dr. Chris Snow Bio See more Dr....","categories": [],
         "tags": [],
         "url": "/cambio/contact/",
         "teaser": null
       },{
         "title": "Experiments library",
-        "excerpt":"Automated Protein Crystallization   Cell-free Translation   Duckweed Growth   Protein Purification  ","categories": [],
+        "excerpt":"Below is our growing experimental protocol library available for automation!   Automated Protein Crystallization      Efficently explore multiple conditions of crystallization for a protein of interest or mass produce protein crystals for x-ray diffraction.   Cell-free Translation      Duckweed Growth      Protein Purification      Automated PCR     ","categories": [],
         "tags": [],
         "url": "/cambio/experiments/",
         "teaser": null
@@ -17,7 +17,7 @@ var store = [{
         "url": "/cambio/media/",
         "teaser": null
       },{
-        "title": "Publications",
+        "title": "",
         "excerpt":"Previous Publications      DeRoo et al. Automation of protein crystallization scaleup via Opentrons-2 liquid handling. 2025. SLAS Technology. 32:100268. →   Publications we have helped bring to fruition WIP      Publication 1   Publication 2   See the our capabilities →  ","categories": [],
         "tags": [],
         "url": "/cambio/publications/",

@@ -558,7 +558,7 @@ blockquote.notice--danger, blockquote.markdown-alert-caution { border-inline-sta
 .notice--danger ul:last-child, .markdown-alert-caution ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* ========================================================================== MASTHEAD ========================================================================== */
-.masthead { position: relative; border-bottom: 1px solid #cccccc; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; z-index: 20; }
+.masthead { position: relative; border-bottom: 1px solid #D9782D; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; z-index: 20; margin-left: 10%; background: #ffffff; }
 .masthead__inner-wrap { clear: both; margin-inline: auto; padding: 1em; max-width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; }
 .masthead__inner-wrap::after { clear: both; content: ""; display: table; }
 @media (min-width: 80em) { .masthead__inner-wrap { max-width: 1280px; } }
@@ -595,7 +595,7 @@ blockquote.notice--danger, blockquote.markdown-alert-caution { border-inline-sta
 .pagination::after { clear: both; content: ""; display: table; }
 .pagination ul { margin: 0; padding: 0; list-style-type: none; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; }
 .pagination li { display: block; float: inline-start; margin-inline-start: -1px; }
-.pagination li a { display: block; margin-bottom: 0.25em; padding: 0.5em 1em; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; text-align: center; text-decoration: none; color: #0e2431; border: 1px solid #999999; border-radius: 0; }
+.pagination li a { display: block; margin-bottom: 0.25em; padding: 0.5em 1em; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1.5; text-align: center; text-decoration: none; color: #0e2431; border: 1px solid #D9782D; border-radius: 0; }
 .pagination li a:hover { color: #95798f; }
 .pagination li a.current, .pagination li a.current.disabled { color: #fff; background: #7E5475; }
 .pagination li a.disabled { color: rgba(14, 36, 49, 0.5); pointer-events: none; cursor: not-allowed; }
@@ -608,7 +608,7 @@ blockquote.notice--danger, blockquote.markdown-alert-caution { border-inline-sta
 .pagination--pager:last-child { margin-inline-start: -1px; border-start-start-radius: 0; border-end-start-radius: 0; }
 .pagination--pager.disabled { color: rgba(14, 36, 49, 0.5); pointer-events: none; cursor: not-allowed; }
 
-.page__content + .pagination, .page__meta + .pagination, .comment__date + .pagination, .page__share + .pagination, .page__comments + .pagination { margin-top: 2em; padding-top: 2em; border-top: 1px solid #cccccc; }
+.page__content + .pagination, .page__meta + .pagination, .comment__date + .pagination, .page__share + .pagination, .page__comments + .pagination { margin-top: 2em; padding-top: 2em; border-top: 1px solid #D9782D; }
 
 /* Priority plus navigation ========================================================================== */
 .greedy-nav { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 2em; background: #ffffff; }
@@ -982,9 +982,11 @@ pre:hover .clipboard-copy-button { opacity: 1; }
 
 /* Layout specific */
 /* ========================================================================== SINGLE PAGE/POST ========================================================================== */
-#main { clear: both; margin-left: auto; margin-top: 2em; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; max-width: 100%; -webkit-animation-delay: 0.35s; animation-delay: 0.35s; }
+#main { clear: both; margin-left: 20%; margin-top: 1em; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; max-width: 100%; -webkit-animation-delay: 0.35s; animation-delay: 0.35s; }
 #main::after { clear: both; content: ""; display: table; }
 @media (min-width: 80em) { #main { max-width: 1280px; } }
+
+.main__left-decoration { background-image: url("../images/sidebar_left.png"); background-repeat: repeat-y; margin-top: -10%; width: 17%; height: 100%; position: absolute; bottom: 0; }
 
 @media (min-width: 64em) { .page { float: right; width: 100%; padding-right: 200px; } }
 @media (min-width: 80em) { .page { width: 100%; padding-right: 300px; } }
@@ -997,7 +999,7 @@ pre:hover .clipboard-copy-button { opacity: 1; }
 .page__lead { font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 1.25em; }
 
 .page__content { /* paragraph indents */ /* blockquote citations */ }
-.page__content h2 { padding-bottom: 0.5em; border-bottom: 1px solid #cccccc; }
+.page__content h2 { padding-bottom: 0.5em; border-bottom: 1px solid #D9782D; }
 .page__content p, .page__content li, .page__content dl { font-size: 1em; }
 .page__content p { margin: 0 0 1.3em; /* sibling indentation*/ }
 .page__content a:not(.btn):hover { text-decoration: none; }
@@ -1009,7 +1011,7 @@ pre:hover .clipboard-copy-button { opacity: 1; }
 
 .page__hero { position: relative; margin-bottom: 2em; clear: both; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
 .page__hero::after { clear: both; content: ""; display: table; }
-.page__hero--overlay { position: relative; margin-bottom: 2em; padding: 3em 0; clear: both; background-size: cover; background-repeat: no-repeat; background-position: center; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+.page__hero--overlay { position: relative; margin-bottom: 2em; padding: 3em 0; clear: both; background-size: cover; background-repeat: no-repeat; background-position: center; z-index: 10; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
 .page__hero--overlay::after { clear: both; content: ""; display: table; }
 .page__hero--overlay a { color: #fff; }
 .page__hero--overlay .wrapper { padding-left: 1em; padding-right: 1em; }
@@ -1048,7 +1050,7 @@ pre:hover .clipboard-copy-button { opacity: 1; }
 /* Comments ========================================================================== */
 .page__comments { float: left; margin-left: 0; margin-right: 0; width: 100%; clear: both; }
 
-.page__comments-title { margin-top: 2rem; margin-bottom: 10px; padding-top: 2rem; font-size: 0.75em; border-top: 1px solid #cccccc; text-transform: uppercase; }
+.page__comments-title { margin-top: 2rem; margin-bottom: 10px; padding-top: 2rem; font-size: 0.75em; border-top: 1px solid #D9782D; text-transform: uppercase; }
 
 .page__comments-form { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .page__comments-form.disabled input, .page__comments-form.disabled button, .page__comments-form.disabled textarea, .page__comments-form.disabled label { pointer-events: none; cursor: not-allowed; filter: alpha(opacity=65); box-shadow: none; opacity: 0.65; }
@@ -1073,7 +1075,7 @@ pre:hover .clipboard-copy-button { opacity: 1; }
 .comment__date a { text-decoration: none; }
 
 /* Related ========================================================================== */
-.page__related { clear: both; float: left; margin-top: 2em; padding-top: 1em; border-top: 1px solid #cccccc; }
+.page__related { clear: both; float: left; margin-top: 2em; padding-top: 1em; border-top: 1px solid #D9782D; }
 .page__related::after { clear: both; content: ""; display: table; }
 @media (min-width: 64em) { .page__related { float: right; width: 100%; } }
 @media (min-width: 80em) { .page__related { width: 100%; } }

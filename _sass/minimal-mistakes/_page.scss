@@ -4,8 +4,8 @@
 
 #main {
   @include clearfix;
-  margin-left: auto;
-  margin-top: 2em;
+  margin-left: 20%;
+  margin-top: 1em;
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
@@ -19,6 +19,18 @@
     max-width: $x-large;
   }
 }
+
+
+.main__left-decoration{
+  background-image: url('../images/sidebar_left.png');
+  background-repeat: repeat-y;
+  margin-top: -10%;
+  width: 17%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 
 .page {
 
@@ -71,7 +83,7 @@
 
   h2 {
     padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border-color2;
   }
 
   p, li, dl {
@@ -142,10 +154,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 10;
     -webkit-animation: $intro-transition;
             animation: $intro-transition;
     -webkit-animation-delay: 0.25s;
             animation-delay: 0.25s;
+      
 
     a {
       color: #fff;
@@ -316,7 +330,7 @@
   margin-bottom: 10px;
   padding-top: 2rem;
   font-size: $type-size-6;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $border-color2;
   text-transform: uppercase;
 }
 
@@ -407,7 +421,7 @@
   float: left;
   margin-top: 2em;
   padding-top: 1em;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $border-color2;
 
   @include breakpoint($large) {
     float: right;

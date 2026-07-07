@@ -20,19 +20,20 @@ intro:
 feature_row:
   - title: "Talk to your robot"
     excerpt: >-
-      A conversational voice interface (speech-to-text + text-to-speech) that
+      Cam, the OpenTrons Flex agent features a conversational voice interface that
       greets you, asks clarifying questions, confirms assumptions, and narrates
-      what it's about to do — before it does it.
+      what it's about to do. The agent also teaches a new user how to use the Flex.
   - title: "Sees the deck"
     excerpt: >-
-      A camera + vision pipeline that reads the deck: identifying labware,
-      detecting tip presence, and recognizing returning users — keeping an
-      always-current picture of what's loaded where.
+      Our setup features a camera and vision pipeline that reads the deck: identifying labware,
+      detecting tip presence, and keeping track of liquid levels across the experiment. Also alerts the user when 
+      an experiment is finished or errors via email or text.
   - title: "Knows your protocols"
     excerpt: >-
-      A searchable protocol library with rich, LLM-ready metadata, plus live
+      The agent features a searchable protocol library with rich, LLM-ready metadata, plus live
       inventory of tips, tubes, and pipettes with confidence that decays over
-      time so stale assumptions get re-checked.
+      time so stale assumptions get re-checked. The agent also keeps its own wiki of skills related to
+      which protocols worked best with feedback from the user.
 ---
 
 {% include feature_row id="intro" type="center" %}

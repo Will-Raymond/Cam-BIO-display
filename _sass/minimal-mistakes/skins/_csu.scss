@@ -9,6 +9,7 @@ $text-color: #000 !default;
 $muted-text-color: $dark-gray !default;
 $primary-color: #7E5475 !default;
 $border-color: mix(#000, $background-color, 20%) !default;
+$border-color2:  #D9782D !default;
 $code-background-color: mix(#fff, $background-color, 20%) !default;
 $code-background-color-dark: mix(#000, $background-color, 10%) !default;
 $form-background-color: mix(#fff, $background-color, 15%) !default;
@@ -23,7 +24,6 @@ $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
 /* notices */
 $notice-background-mix: 0% !default;
 $info-color: #82C503 !default;
-
 
 
 /* sunrise syntax highlighting (base16) */

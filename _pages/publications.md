@@ -1,5 +1,5 @@
 ---
-title: "Publications"
+title: ""
 permalink: /publications/
 toc: true
 toc_label: "On this page"

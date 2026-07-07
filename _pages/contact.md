@@ -1,5 +1,5 @@
 ---
-title: "Contact us"
+title: "About us"
 permalink: /contact/
 toc: true
 toc_label: "On this page"
@@ -23,10 +23,7 @@ feature_row2:
     exerpt: "Team member bio"   
 ---
 
-
-If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below.
-
-Email us at cambio@colostate.edu - NOT SET UP YET
+We are an interdisciplenary team of scientists with backgrounds that range from Protein engineeiring, virology, fluorescence microscopy, machine learning, and RNA biology aiming to bring efficient and reproducible automated laboratory experiments to Colorado State University, and to the broader scientific world! 
 
 
 ## Tag Team
@@ -69,9 +66,12 @@ Email us at cambio@colostate.edu - NOT SET UP YET
 <a href="mailto:wsraymon@rams.colostate.edu">
 
 
+## Contact us!
+
+If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below.
+
+Email us at cambio@colostate.edu - NOT SET UP YET
 
 {% include contact.html %}
 
 
-[See the roadmap →]({{ "/roadmap/" | relative_url }})
-{: .notice--info}
