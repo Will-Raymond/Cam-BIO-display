@@ -44,7 +44,7 @@ Email us at cambio@colostate.edu - NOT SET UP YET
             <p> Bio </p>
             <a class="btn btn--primary .btn--large" href="https://vetmedbiosci.colostate.edu/directory/member/?id=brian-geiss-3203"> See more </a>
         </div>
-        <img src="/cambio/assets/images/tim_stasevich.png" alt="Photo of Dr. Tim Stasevich" style="border-radius: 1%;">
+        <img src="../assets/images/tim_stasevich.png" alt="Photo of Dr. Tim Stasevich" style="border-radius: 1%;">
         <div style="min-width: 400px;">
             <h2> Dr. Tim Stasevich </h2>
             <p> Bio </p>
