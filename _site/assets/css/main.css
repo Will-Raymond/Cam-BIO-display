@@ -987,7 +987,7 @@ pre:hover .clipboard-copy-button { opacity: 1; }
 #main::after { clear: both; content: ""; display: table; }
 @media (min-width: 80em) { #main { max-width: 1280px; } }
 
-.main__left-decoration { background-image: url("../images/sidebar_left.png"); background-repeat: repeat-y; background-size: 100%; margin-top: -10%; width: 17%; height: 100%; position: absolute; bottom: 0; }
+.main__left-decoration { background-image: url("../images/sidebar_left.png"); background-repeat: repeat-y; background-size: 350px; margin-top: -10%; width: 17%; height: 100%; position: absolute; bottom: 0; }
 
 @media (min-width: 64em) { .page { float: right; width: 100%; padding-right: 200px; } }
 @media (min-width: 80em) { .page { width: 100%; padding-right: 300px; } }
