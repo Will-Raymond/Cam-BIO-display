@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Experiments library",
-        "excerpt":"Automated Protein Crystallization The growth of crystals is a valuable experiment for structure exploration and only occurs under very specific conditions that can be difficult to acheive, even in a lab setting. Because of this, crystals are grown in plates where concentrations can be iterated across a gradient in order...","categories": [],
+        "excerpt":"We have a growing library of experimental protocols we are automating at Colorado State University, below is a couple of examples of what we can do so far. Automated Protein Crystallization The growth of crystals is a valuable experiment for structure exploration and only occurs under very specific conditions that...","categories": [],
         "tags": [],
         "url": "/cambio/experiments/",
         "teaser": null

@@ -10,12 +10,18 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
-  margin-left:10%;
-  background: $background-color;
+  margin-left:0%;
+  background: none;
+
+  &__left-spacer{
+    background: none;
+    width: 15%;
+  }
 
   &__inner-wrap {
     @include clearfix;
     margin-inline: auto;
+    margin-left:18%;
     padding: 1em;
     max-width: 100%;
     display: -webkit-box;
