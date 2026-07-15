@@ -12,8 +12,8 @@ header:
     - label: "View on GitHub"
       url: https://github.com/cdsnow
 excerpt: >-
-  A voice-controlled AI lab assistant for the OpenTrons Flex: describe your
-  experiment out loud and it designs protocols collaboratively with a user.
+  A voice-controlled AI lab assistants for various Automated experiment platforms: describe your
+  experiments out loud and our agents design protocols collaboratively with a user for robots such as the OpenTrons Flex.
 intro:
   - excerpt: >-
         Cam-BIO is an open source human-AI collaboration platform designed to speed up the next generation of benchtop experiments at Colorado State University. With the advent of automated design pipelines powered by large-scale prediction models such as Alphafold3, Boltz-2, RFdiffusion and others, experimental workloads for validating machine learning outputs have yet to catch up. We on the Cam-BIO team aim to bring automated experimental protocols to CSU's researchers in an open-source, validated, and easy-to-use manner to bridge this knowledge gap, as well as speeding up other laboratory experimentation such as PCR, protein crystalization, and directed evolution. 
