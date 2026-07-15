@@ -2,6 +2,8 @@
 main:
   - title: "Home"
     url: /
+  - title: "Agents"
+    url: /agents/
   - title: "Roadmap"
     url: /roadmap/
   - title: "Experiments"

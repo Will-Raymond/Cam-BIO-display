@@ -1,4 +1,10 @@
 var store = [{
+        "title": "",
+        "excerpt":"Cam - OpenTrons FLEX   Link to repo   Demos   Dotty - Dispendix iDOT   Link to repo   Demos   Iven - Inventory and results managment   Link to repo   Demos   See the our capabilities →  ","categories": [],
+        "tags": [],
+        "url": "/cambio/agents/",
+        "teaser": null
+      },{
         "title": "About us",
         "excerpt":"We are an interdisciplenary team of scientists with backgrounds that range from Protein engineeiring, virology, fluorescence microscopy, machine learning, and RNA biology aiming to bring efficient and reproducible automated laboratory experiments to Colorado State University, and to the broader scientific world! Tag Team Dr. Chris Snow Bio See more Dr....","categories": [],
         "tags": [],

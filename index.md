@@ -18,22 +18,15 @@ intro:
   - excerpt: >-
         Cam-BIO is an open source human-AI collaboration platform designed to speed up the next generation of benchtop experiments at Colorado State University. With the advent of automated design pipelines powered by large-scale prediction models such as Alphafold3, Boltz-2, RFdiffusion and others, experimental workloads for validating machine learning outputs have yet to catch up. We on the Cam-BIO team aim to bring automated experimental protocols to CSU's researchers in an open-source, validated, and easy-to-use manner to bridge this knowledge gap, as well as speeding up other laboratory experimentation such as PCR, protein crystalization, and directed evolution. 
 feature_row:
-  - title: "Talk to your robot"
+  - title: "Talk to your robots"
     excerpt: >-
-      Cam, the OpenTrons Flex agent features a conversational voice interface that
-      greets you, asks clarifying questions, confirms assumptions, and narrates
-      what it's about to do. The agent also teaches a new user how to use the Flex.
-  - title: "Sees the deck"
+      We plan to have a conversational interface agent for all a wide variety of laboratory robots all managed by a Director AI. The first one, Cam, is an OpenTrons Flex agent features a voice interface that builds liquid handling protocols with from a conversation with a human. You can speak to Cam and ask clarifying questions about a protocol, ask it for information the FLEX, and ask it to run preapproved protocols. 
+  - title: "Plan experiments collaboratively"
     excerpt: >-
-      Our setup features a camera and vision pipeline that reads the deck: identifying labware,
-      detecting tip presence, and keeping track of liquid levels across the experiment. Also alerts the user when 
-      an experiment is finished or errors via email or text.
-  - title: "Knows your protocols"
+      Director agent who sees all robots and inventory and can plan based on current capabilities.
+  - title: "Keep track of results and inventory"
     excerpt: >-
-      The agent features a searchable protocol library with rich, LLM-ready metadata, plus live
-      inventory of tips, tubes, and pipettes with confidence that decays over
-      time so stale assumptions get re-checked. The agent also keeps its own wiki of skills related to
-      which protocols worked best with feedback from the user.
+      Inventory agent
 ---
 
 {% include feature_row id="intro" type="center" %}
