@@ -12,21 +12,21 @@ header:
     - label: "View on GitHub"
       url: https://github.com/cdsnow
 excerpt: >-
-  A voice-controlled AI lab assistants for various Automated experiment platforms: describe your
-  experiments out loud and our agents design protocols collaboratively with a user for robots such as the OpenTrons Flex.
+  A library of voice-controlled AI lab assistants for various automated experiment platforms. Describe your
+  experiments out loud and our agents design protocols collaboratively with a user for their robots.
 intro:
   - excerpt: >-
         Cam-BIO is an open source human-AI collaboration platform designed to speed up the next generation of benchtop experiments at Colorado State University. With the advent of automated design pipelines powered by large-scale prediction models such as Alphafold3, Boltz-2, RFdiffusion and others, experimental workloads for validating machine learning outputs have yet to catch up. We on the Cam-BIO team aim to bring automated experimental protocols to CSU's researchers in an open-source, validated, and easy-to-use manner to bridge this knowledge gap, as well as speeding up other laboratory experimentation such as PCR, protein crystalization, and directed evolution. 
 feature_row:
   - title: "Talk to your robots"
     excerpt: >-
-      We plan to have a conversational interface agent for all a wide variety of laboratory robots all managed by a Director AI. The first one, Cam, is an OpenTrons Flex agent features a voice interface that builds liquid handling protocols with from a conversation with a human. You can speak to Cam and ask clarifying questions about a protocol, ask it for information the FLEX, and ask it to run preapproved protocols. 
+      We plan to have a conversational interface agent for all a wide variety of laboratory robots all managed by a director AI. The first one, Cam, is an OpenTrons Flex agent features a voice interface that builds liquid handling protocols from a conversation with a human. You can speak to Cam and ask clarifying questions about a protocol, ask it for information the FLEX, and request it to run preapproved protocols. In protocol planning mode, Cam and a human user work together to write the protocol code for a desired experiment.
   - title: "Plan experiments collaboratively"
     excerpt: >-
       Director agent who sees all robots and inventory and can plan based on current capabilities.
   - title: "Keep track of results and inventory"
     excerpt: >-
-      Inventory agent
+      Iven our inventory agent keeps track of your labs inventory and reports back to the user and director when supplies are low or simply where they are located in the lab space! Ivens job is also to keep track of technical documents and result files.
 ---
 
 {% include feature_row id="intro" type="center" %}

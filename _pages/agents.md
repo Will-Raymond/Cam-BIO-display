@@ -12,6 +12,12 @@ Link to repo
 
 Demos
 
+## Otto - Opentrons OT2
+
+Link to repo
+
+Demos
+
 ## Dotty - Dispendix iDOT
 
 Link to repo

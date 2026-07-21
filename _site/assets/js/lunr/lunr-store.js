@@ -1,6 +1,6 @@
 var store = [{
         "title": "",
-        "excerpt":"Cam - OpenTrons FLEX   Link to repo   Demos   Dotty - Dispendix iDOT   Link to repo   Demos   Iven - Inventory and results managment   Link to repo   Demos   See the our capabilities →  ","categories": [],
+        "excerpt":"Cam - OpenTrons FLEX   Link to repo   Demos   Otto - Opentrons OT2   Link to repo   Demos   Dotty - Dispendix iDOT   Link to repo   Demos   Iven - Inventory and results managment   Link to repo   Demos   See the our capabilities →  ","categories": [],
         "tags": [],
         "url": "/cambio/agents/",
         "teaser": null
