@@ -1,6 +1,6 @@
 var store = [{
         "title": "",
-        "excerpt":"Cam - OpenTrons FLEX   Link to repo   Demos   Otto - Opentrons OT2   Link to repo   Demos   Dotty - Dispendix iDOT   Link to repo   Demos   Iven - Inventory and results managment   Link to repo   Demos   See the our capabilities →  ","categories": [],
+        "excerpt":"Meet our Agents Cam - Director Cam’s job is to coordinate with a human collaborator to design protocols and experiments that span many equipment types and to dispatch jobs to individual robot level agents. WIP Robert - OpenTrons FLEX Robert is our agent for the OpenTrons FLEX, its his job...","categories": [],
         "tags": [],
         "url": "/cambio/agents/",
         "teaser": null

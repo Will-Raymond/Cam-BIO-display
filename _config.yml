@@ -16,10 +16,11 @@ repository: cdsnow/cambio
 theme: "minimal-mistakes-jekyll"
 minimal_mistakes_skin: "csu"
 search: true
+logo: "/assets/images/cam_bio_logo_1.png"
 
 # Author / footer
 author:
-  name: "Chris Snow / Will RAymond"
+  name: "Chris Snow / Will Raymond"
   bio: "OpenTrons Flex automation · Colorado State University"
   location: "Colorado State University"
 
