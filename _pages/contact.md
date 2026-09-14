@@ -25,6 +25,14 @@ feature_row2:
 
 We are an interdisciplenary team of scientists with backgrounds that range from Protein engineeiring, virology, fluorescence microscopy, machine learning, and RNA biology aiming to bring efficient and reproducible automated laboratory experiments to Colorado State University, and to the broader scientific world! 
 
+## Contact us!
+
+If you would like to contact us about using automation at Cam-BIO for your experiment please leave an email in the comment box below.
+
+Email us at cambio@colostate.edu - NOT SET UP YET
+
+{% include contact.html %}
+
 
 ## Tag Team
 
@@ -66,12 +74,5 @@ We are an interdisciplenary team of scientists with backgrounds that range from 
 <a href="mailto:wsraymon@rams.colostate.edu">
 
 
-## Contact us!
-
-If you would like to contact us about using Cam-BIO for your experimental protocol setup please leave an email in the comment box below.
-
-Email us at cambio@colostate.edu - NOT SET UP YET
-
-{% include contact.html %}
 
 

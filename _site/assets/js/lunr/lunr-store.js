@@ -1,12 +1,12 @@
 var store = [{
         "title": "",
-        "excerpt":"Meet our Agents Cam - Director Cam’s job is to coordinate with a human collaborator to design protocols and experiments that span many equipment types and to dispatch jobs to individual robot level agents. WIP Robert - OpenTrons FLEX Robert is our agent for the OpenTrons FLEX, its his job...","categories": [],
+        "excerpt":"Equipment OpenTrons FLEX Automated thermocycler Heater shaker 96 head pipetter Automatic plate pourer OpenTrons OT2 x2 I.Dot Dispendex Tapestation PIXL colony picker Eppendorf Epimotion 5705 Bambu X2D Quantstudio Meet our Agents We are designing validated agents for our own machines, with tools for swappable LLM models. Cam - Director Cam’s...","categories": [],
         "tags": [],
-        "url": "/cambio/agents/",
+        "url": "/cambio/equipment/",
         "teaser": null
       },{
         "title": "About us",
-        "excerpt":"We are an interdisciplenary team of scientists with backgrounds that range from Protein engineeiring, virology, fluorescence microscopy, machine learning, and RNA biology aiming to bring efficient and reproducible automated laboratory experiments to Colorado State University, and to the broader scientific world! Tag Team Dr. Chris Snow Bio See more Dr....","categories": [],
+        "excerpt":"We are an interdisciplenary team of scientists with backgrounds that range from Protein engineeiring, virology, fluorescence microscopy, machine learning, and RNA biology aiming to bring efficient and reproducible automated laboratory experiments to Colorado State University, and to the broader scientific world! Contact us! If you would like to contact us...","categories": [],
         "tags": [],
         "url": "/cambio/contact/",
         "teaser": null
