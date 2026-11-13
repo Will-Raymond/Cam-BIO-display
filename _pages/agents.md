@@ -15,7 +15,7 @@ toc_sticky: true
     * 96 head pipetter
 * Automatic plate pourer
 * OpenTrons OT2  x2
-* I.Dot Dispendex
+* Dispendix I.DOT
 * Tapestation
 * PIXL colony picker
 * Eppendorf Epimotion 5705
@@ -34,7 +34,7 @@ WIP
 
 ## Robert - OpenTrons FLEX
 
-Robert is our agent for the OpenTrons FLEX, its his job to design complicated multistep protocols with a human's guidance. The FLEX is the work horse of our lab automation, with many modular parts and key to our current protocols and future plans!
+Robert is our agent for the OpenTrons FLEX, it's his job to design complicated multistep protocols with a human's guidance. The FLEX is the work horse of our lab automation, with many modular parts and key to our current protocols and future plans!
 
 Demos
 
@@ -53,19 +53,19 @@ Demos
 
 ## Dotty - Dispendix I.DOT
 
-Dotty is our agent for managing a Dispendix I.DOT nanoliquid dispenser. Dotty helps design complicated dispense protocols, dispatches them, and monitors their success with the I.DOT machine. The agent can design either arbirtary XY dispenses or dispatch user designed csv based protocols to the robot.
+Dotty is our agent for managing a Dispendix I.DOT nanoliquid dispenser. Dotty helps design complicated dispense protocols, dispatches them, and monitors their success with the I.DOT machine. The agent can design either arbitrary XY dispenses or dispatch user designed csv based protocols to the robot.
 
 
 Link to repo
 
 Demos
 
-## Iven - Inventory and results managment
+## Iven - Inventory and results management
 
 Link to repo
 
 Demos
 
 
-[See the our capabilities →]({{ "/experiments/" | relative_url }})
+[See our experiments →]({{ "/experiments/" | relative_url }})
 {: .notice--info}

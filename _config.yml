@@ -10,9 +10,9 @@ locale: en-US
 # Published at https://will-raymond.github.io/cambio/
 url: "https://will-raymond.github.io"
 baseurl: "/cambio"
-repository: cdsnow/cambio
+repository: Will-Raymond/Cam-BIO-display
 
-# Theme -- local editied version of minimal mistakes to match csu branding
+# Theme -- local edited version of minimal mistakes to match csu branding
 theme: "minimal-mistakes-jekyll"
 minimal_mistakes_skin: "csu"
 search: true

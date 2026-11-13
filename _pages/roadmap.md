@@ -19,8 +19,8 @@ toc_sticky: true
 * Cell free protein translation protocols
 * Lab inventory agent
     - Integration with agent UIs to see current lab capabilities
-    - Help scientists locate equiment around the lab
-    - Searchable index of manuals of laboratory equiment and SDS sheets
+    - Help scientists locate equipment around the lab
+    - Searchable index of manuals of laboratory equipment and SDS sheets
 </div>
 
 # Fall 2026

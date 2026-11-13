@@ -16,5 +16,5 @@ toc_sticky: true
 * [Publication 2](https://google.com)
 
 
-[See the our capabilities →]({{ "/experiments/" | relative_url }})
+[See our experiments →]({{ "/experiments/" | relative_url }})
 {: .notice--info}

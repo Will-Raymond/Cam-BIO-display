@@ -7,8 +7,8 @@ header:
   overlay_filter: "0.55"
   overlay_image: /assets/images/deckphoto.JPG
   actions:
-    - label: "Explore Features"
-      url: /features/
+    - label: "Meet our Agents"
+      url: /equipment/
     - label: "View on GitHub"
       url: https://github.com/cdsnow
 excerpt: >-
@@ -20,13 +20,13 @@ intro:
 feature_row:
   - title: "Talk to your robots"
     excerpt: >-
-      We plan to have a conversational interface agent for all a wide variety of laboratory robots all managed by a director AI. The first one, Cam, is an OpenTrons Flex agent features a voice interface that builds liquid handling protocols from a conversation with a human. You can speak to Cam and ask clarifying questions about a protocol, ask it for information the FLEX, and request it to run preapproved protocols. In protocol planning mode, Cam and a human user work together to write the protocol code for a desired experiment.
+      We are building conversational agents for a wide variety of laboratory robots, all coordinated by a director AI. Our first robot agent, Robert, drives the OpenTrons Flex with a voice interface that builds liquid handling protocols from a conversation with a human. You can ask Robert clarifying questions about a protocol, ask it for information about the Flex, and request it to run preapproved protocols. In protocol planning mode, Robert and a human user work together to write the protocol code for a desired experiment.
   - title: "Plan experiments collaboratively"
     excerpt: >-
-      Director agent who sees all robots and inventory and can plan based on current capabilities.
+      Cam, our director agent, sees every robot and the lab's inventory, and works with you to plan experiments that span multiple instruments based on what the lab can do right now.
   - title: "Keep track of results and inventory"
     excerpt: >-
-      Iven our inventory agent keeps track of your labs inventory and reports back to the user and director when supplies are low or simply where they are located in the lab space! Ivens job is also to keep track of technical documents and result files.
+      Iven, our inventory agent, keeps track of your lab's inventory and reports back to the user and director when supplies are low, or simply where they are located in the lab space! Iven's job is also to keep track of technical documents and result files.
 ---
 
 {% include feature_row id="intro" type="center" %}

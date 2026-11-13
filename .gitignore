@@ -60,4 +60,8 @@ build-iPhoneSimulator/
 
 
 .DS_store
-_site/assets/images/sidebar.clip
+
+# Jekyll build output / caches
+_site/
+.jekyll-cache/
+.sass-cache/
