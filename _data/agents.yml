@@ -1,0 +1,87 @@
+# Agents shown on the Capabilities page (map + selector).
+# tier: director | support | robot   — where the agent sits in the ecosystem map
+# machine: the equipment the agent drives (shown under its name in the map)
+# status: optional short label, e.g. "In development"
+# features: bullet list shown in the selector panel
+# repo / demo: optional URLs; leave empty to hide the button
+
+- id: cam
+  name: "Cam"
+  role: "Director"
+  tier: director
+  machine: "Coordinates all agents"
+  status: "In development"
+  summary: >-
+    Cam's job is to coordinate with a human collaborator to design protocols and
+    experiments that span many equipment types and to dispatch jobs to individual
+    robot-level agents.
+  features:
+    - "Plans multi-instrument experiments together with a scientist"
+    - "Dispatches jobs to the individual robot agents"
+    - "Works with Iven to track current lab capabilities and which projects need more resources"
+  repo: ""
+  demo: ""
+
+- id: iven
+  name: "Iven"
+  role: "Inventory & results"
+  tier: support
+  machine: "Lab inventory & documents"
+  status: ""
+  summary: >-
+    Iven keeps track of the lab's inventory and reports back to the user and
+    director when supplies are low, or simply where they are located in the lab space.
+  features:
+    - "Tracks lab inventory and flags low supplies"
+    - "Helps scientists find where things are in the lab"
+    - "Keeps track of technical documents and result files"
+  repo: ""
+  demo: ""
+
+- id: robert
+  name: "Robert"
+  role: "Liquid handling"
+  tier: robot
+  machine: "OpenTrons FLEX & OT-2"
+  status: ""
+  summary: >-
+    Robert is our agent for all of our OpenTrons liquid handlers: the FLEX and both
+    OT-2s (which we call Otto). It's his job to design complicated multistep protocols with a human's
+    guidance. The FLEX is the workhorse of our lab automation, with many modular parts,
+    and key to our current protocols and future plans.
+  features:
+    - "Controls every OpenTrons liquid handler in the lab (FLEX and OT-2)"
+    - "Voice interface that builds liquid-handling protocols from a conversation"
+    - "Answers clarifying questions about a protocol or about the robots"
+    - "Runs preapproved protocols on request"
+    - "Protocol planning mode: writes protocol code together with the user"
+  repo: ""
+  demo: ""
+
+- id: dotty
+  name: "Dotty"
+  role: "Nanoliter dispensing"
+  tier: robot
+  machine: "Dispendix I.DOT"
+  status: ""
+  summary: >-
+    Dotty is our agent for managing a Dispendix I.DOT nanoliter dispenser. Dotty helps
+    design complicated dispense protocols, dispatches them, and monitors their success
+    on the I.DOT.
+  features:
+    - "Designs arbitrary XY dispense protocols"
+    - "Dispatches user-designed CSV protocols to the robot"
+    - "Monitors dispense runs for success"
+  repo: ""
+  demo: ""
+
+- id: bambi
+  name: "Bambi"
+  role: "3D printing"
+  tier: robot
+  machine: "Bambu H2C"
+  status: ""
+  summary: ""
+  features: []
+  repo: ""
+  demo: ""

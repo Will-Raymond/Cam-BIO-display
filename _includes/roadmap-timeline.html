@@ -1,0 +1,169 @@
+<!-- Vertical scroll timeline. Data: _data/roadmap.yml -->
+<style>
+  .rm {
+    --rm-purple: #7E5475;
+    --rm-orange: #D9782D;
+    --rm-gold: #FFC038;
+    --rm-green: #82C503;
+    --rm-ink: #0e2431;
+    --rm-muted: #6b7680;
+    --rm-line: #e3e3e3;
+    position: relative;
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+  }
+  .rm__list { margin: 0; padding: 0; list-style: none; }
+  /* rail + scroll-driven fill */
+  .rm__rail, .rm__fill {
+    position: absolute; top: 0; left: 1.1rem; width: 4px; border-radius: 2px;
+  }
+  .rm__rail { bottom: 0; background: var(--rm-line); }
+  .rm__fill {
+    height: 0; background: linear-gradient(var(--rm-purple), var(--rm-orange));
+    transition: height .15s linear;
+  }
+  .rm__item {
+    position: relative;
+    margin: 0 0 2.5rem; padding-left: 3.25rem;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .rm__item.is-visible { opacity: 1; transform: none; }
+  .rm__dot {
+    position: absolute; left: .45rem; top: .35rem;
+    width: 1.35rem; height: 1.35rem; border-radius: 50%;
+    background: #fff; border: 4px solid var(--rm-line);
+    transition: border-color .4s, background .4s, box-shadow .4s;
+  }
+  .rm__item.is-visible .rm__dot { border-color: var(--rm-purple); }
+  .rm__item.is-past .rm__dot { background: var(--rm-purple); border-color: var(--rm-purple); }
+  .rm__item.is-now .rm__dot {
+    background: var(--rm-gold); border-color: var(--rm-orange);
+    box-shadow: 0 0 0 0 rgba(217,120,45,.6); animation: rm-pulse 2s infinite;
+  }
+  @keyframes rm-pulse {
+    70% { box-shadow: 0 0 0 12px rgba(217,120,45,0); }
+    100% { box-shadow: 0 0 0 0 rgba(217,120,45,0); }
+  }
+  .rm__card {
+    background: #fff; border: 1px solid var(--rm-line); border-top: 4px solid var(--rm-purple);
+    border-radius: 8px; padding: 1rem 1.25rem;
+    box-shadow: 0 2px 10px rgba(14,36,49,.06);
+    transition: box-shadow .25s, transform .25s;
+  }
+  .rm__card:hover { box-shadow: 0 8px 24px rgba(14,36,49,.12); transform: translateY(-2px); }
+  .rm__item.is-now .rm__card { border-top-color: var(--rm-orange); }
+  .rm__head { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; margin-bottom: .5rem; }
+  .rm__term { margin: 0 !important; padding: 0 !important; border: 0 !important; font-size: 1.25rem; color: var(--rm-ink); }
+  .rm__badge {
+    font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    padding: .15rem .55rem; border-radius: 999px; background: var(--rm-line); color: var(--rm-ink);
+  }
+  .rm__item.is-now .rm__badge { background: var(--rm-gold); }
+  .rm__item.is-past .rm__badge { background: var(--rm-green); color: #fff; }
+  .rm__goals { margin: 0; padding: 0; list-style: none; font-size: 1rem; }
+  .rm__goal { margin: .6rem 0 0; padding-left: 1.1rem; position: relative; }
+  .rm__goal::before {
+    content: ""; position: absolute; left: 0; top: .55em;
+    width: .45rem; height: .45rem; border-radius: 2px; background: var(--rm-orange);
+  }
+  .rm__goal strong { color: var(--rm-ink); }
+  .rm__sub { margin: .25rem 0 0 0; padding-left: 1rem; color: var(--rm-muted); font-size: .9rem; }
+  .rm__sub li { margin: .15rem 0; }
+  .rm__empty { margin: 0; color: var(--rm-muted); font-style: italic; font-size: .95rem; }
+
+  /* wide screens: centered rail, cards alternate sides */
+  @media (min-width: 64em) {
+    .rm__rail, .rm__fill { left: 50%; margin-left: -2px; }
+    .rm__item { width: 50%; padding-left: 0; padding-right: 2.75rem; }
+    .rm__item:nth-child(odd) { margin-left: 50%; padding-left: 2.75rem; padding-right: 0; }
+    .rm__dot { left: auto; right: -.68rem; }
+    .rm__item:nth-child(odd) .rm__dot { left: -.68rem; right: auto; }
+    .rm__item { transform: translateX(-30px); }
+    .rm__item:nth-child(odd) { transform: translateX(30px); }
+    .rm__item.is-visible { transform: none; }
+    .rm__item:not(:first-of-type) { margin-top: -3rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rm__item, .rm__dot, .rm__fill, .rm__card { transition: none; animation: none; }
+    .rm__item { opacity: 1; transform: none; }
+  }
+</style>
+
+<div class="rm" id="roadmap">
+  <span class="rm__rail" aria-hidden="true"></span>
+  <span class="rm__fill" aria-hidden="true"></span>
+  <ol class="rm__list">
+  {% for s in site.data.roadmap %}
+  <li class="rm__item" data-start="{{ s.start }}" data-end="{{ s.end }}" id="{{ s.term | slugify }}">
+    <span class="rm__dot" aria-hidden="true"></span>
+    <div class="rm__card">
+      <div class="rm__head">
+        <h2 class="rm__term">{{ s.term }}</h2>
+        <span class="rm__badge">Planned</span>
+      </div>
+      {% if s.goals and s.goals.size > 0 %}
+      <ul class="rm__goals">
+        {% for g in s.goals %}
+        <li class="rm__goal"><strong>{{ g.title }}</strong>
+          {% if g.items %}
+          <ul class="rm__sub">{% for i in g.items %}<li>{{ i }}</li>{% endfor %}</ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="rm__empty">Goals coming soon.</p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('roadmap');
+  if (!root) return;
+  var items = root.querySelectorAll('.rm__item');
+  var fill = root.querySelector('.rm__fill');
+  var today = new Date();
+
+  // past / now / planned status from the semester's dates
+  items.forEach(function (el) {
+    var start = new Date(el.dataset.start), end = new Date(el.dataset.end);
+    end.setHours(23, 59, 59);
+    var badge = el.querySelector('.rm__badge');
+    if (today > end) { el.classList.add('is-past'); badge.textContent = 'Completed'; }
+    else if (today >= start) { el.classList.add('is-now'); badge.textContent = 'Now'; }
+  });
+
+  // reveal cards as they scroll into view
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // grow the rail fill with scroll position
+  var ticking = false;
+  function update() {
+    var r = root.getBoundingClientRect();
+    var progress = (window.innerHeight * 0.6 - r.top) / r.height;
+    fill.style.height = (Math.max(0, Math.min(1, progress)) * 100) + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>

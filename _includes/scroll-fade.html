@@ -1,0 +1,31 @@
+<!-- Fade feature-row cards in as they scroll into view (used by _layouts/splash.html) -->
+<style>
+  .sf-ready .feature__item {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .7s ease, transform .7s ease;
+    transition-delay: var(--sf-delay, 0s);
+  }
+  .sf-ready .feature__item.sf-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .sf-ready .feature__item { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+<script>
+(function () {
+  var items = document.querySelectorAll('.feature__item');
+  if (!items.length || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('sf-ready');
+  var io = new IntersectionObserver(function (entries) {
+    var shown = 0;
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      // stagger cards that enter the viewport together
+      e.target.style.setProperty('--sf-delay', (shown++ * 0.15) + 's');
+      e.target.classList.add('sf-in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>

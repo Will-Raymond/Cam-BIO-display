@@ -1,0 +1,52 @@
+# Roadmap timeline — one entry per semester, in order.
+# Each goal is a title plus optional sub-points ("items").
+# Leave `goals` empty to show a "goals coming soon" placeholder.
+# `start` / `end` (YYYY-MM-DD) drive the "Now" highlight and past/future styling.
+
+- term: "Summer 2026"
+  start: 2026-05-15
+  end: 2026-08-15
+  goals:
+    - title: "Full integration with OpenTrons Flex"
+      items:
+        - "OpenTrons Flex UI + interactive protocol workflow"
+    - title: "Protein crystallization protocols"
+      items:
+        - "Miniaturization with iDot plates"
+        - "Validated protocols for gentle pipetting and accurate VLE crystallization with CrysChem plates"
+    - title: "Cell free protein translation protocols"
+    - title: "Lab inventory agent"
+      items:
+        - "Integration with agent UIs to see current lab capabilities"
+        - "Help scientists locate equipment around the lab"
+        - "Searchable index of manuals of laboratory equipment and SDS sheets"
+
+- term: "Fall 2026"
+  start: 2026-08-16
+  end: 2026-12-31
+  goals: []
+
+- term: "Spring 2027"
+  start: 2027-01-01
+  end: 2027-05-14
+  goals: []
+
+- term: "Summer 2027"
+  start: 2027-05-15
+  end: 2027-08-15
+  goals: []
+
+- term: "Fall 2027"
+  start: 2027-08-16
+  end: 2027-12-31
+  goals: []
+
+- term: "Spring 2028"
+  start: 2028-01-01
+  end: 2028-05-14
+  goals: []
+
+- term: "Summer 2028"
+  start: 2028-05-15
+  end: 2028-08-15
+  goals: []

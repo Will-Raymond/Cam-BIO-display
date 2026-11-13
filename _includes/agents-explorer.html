@@ -1,0 +1,278 @@
+<!-- Agent ecosystem map + selector. Data: _data/agents.yml, equipment list: page front matter `equipment` -->
+{% assign agents = site.data.agents %}
+{% assign director = agents | where: "tier", "director" %}
+{% assign support = agents | where: "tier", "support" %}
+{% assign robots = agents | where: "tier", "robot" %}
+<style>
+  .ax {
+    --ax-purple: #7E5475;
+    --ax-orange: #D9782D;
+    --ax-gold: #FFC038;
+    --ax-green: #82C503;
+    --ax-ink: #0e2431;
+    --ax-muted: #6b7680;
+    --ax-line: #dcdcdc;
+    --ax-soft: #f6f3f5;
+  }
+  /* ---------- ecosystem map ---------- */
+  .ax-map {
+    position: relative; margin: 1.5rem 0 2.5rem; padding: 1.5rem 1rem 1.25rem;
+    background: var(--ax-soft); border-radius: 12px; border: 1px solid #ece6ea;
+  }
+  .ax-map__svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  .ax-map__svg path { fill: none; stroke: #c9b8c5; stroke-width: 2; transition: stroke .25s, stroke-width .25s; }
+  .ax-map__svg path.is-hot { stroke: var(--ax-orange); stroke-width: 3; }
+  .ax-map__svg path.is-dashed { stroke-dasharray: 5 5; }
+  .ax-tier { position: relative; display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem 1rem; margin: 0 0 2.25rem; }
+  .ax-tier:last-child { margin-bottom: 0; }
+  .ax-tier__label {
+    width: 100%; text-align: center; margin-bottom: -.25rem;
+    font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ax-muted);
+  }
+  .ax-node {
+    position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center;
+    min-width: 7.5rem; padding: .6rem .9rem; border-radius: 10px;
+    background: #fff; border: 2px solid var(--ax-line); color: var(--ax-ink);
+    font: inherit; font-size: .85rem; line-height: 1.25; text-align: center;
+    box-shadow: 0 1px 4px rgba(14,36,49,.06);
+  }
+  button.ax-node { cursor: pointer; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  button.ax-node:hover, button.ax-node:focus-visible { transform: translateY(-2px); border-color: var(--ax-orange); box-shadow: 0 6px 16px rgba(14,36,49,.12); outline: none; }
+  button.ax-node.is-active { border-color: var(--ax-purple); box-shadow: 0 0 0 3px rgba(126,84,117,.25); }
+  .ax-node__name { font-weight: 700; font-size: 1rem; }
+  .ax-node__sub { color: var(--ax-muted); font-size: .75rem; }
+  .ax-node--human { border-color: var(--ax-gold); background: #fffaf0; }
+  .ax-node--director { border-color: var(--ax-purple); background: var(--ax-purple); color: #fff; min-width: 10rem; }
+  .ax-node--director .ax-node__sub { color: #eadfe7; }
+  /* nudge Cam left so its connectors don't run through the tier labels (wide screens only) */
+  @media (min-width: 40em) { .ax-node--director { left: -100px; } }
+  button.ax-node--director.is-active { box-shadow: 0 0 0 3px rgba(217,120,45,.45); }
+  .ax-node--idle { border-style: dashed; background: transparent; box-shadow: none; color: var(--ax-muted); min-width: 0; padding: .35rem .7rem; font-size: .75rem; }
+  .ax-legend { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: 1.25rem; font-size: .72rem; color: var(--ax-muted); }
+  .ax-legend span::before { content: ""; display: inline-block; width: 1.4rem; height: 0; margin-right: .35rem; vertical-align: middle; border-top: 2px solid #c9b8c5; }
+  .ax-legend .is-dashed::before { border-top-style: dashed; }
+
+  /* ---------- selector ---------- */
+  .ax-tabs { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; padding: 0; }
+  .ax-tab {
+    flex: 1 1 7rem; padding: .55rem .75rem; border-radius: 8px; cursor: pointer;
+    border: 2px solid var(--ax-line); background: #fff; color: var(--ax-ink);
+    font: inherit; font-size: .9rem; font-weight: 600; text-align: center;
+    transition: border-color .2s, background .2s, color .2s;
+  }
+  .ax-tab small { display: block; font-weight: 400; font-size: .7rem; color: var(--ax-muted); }
+  .ax-tab:hover { border-color: var(--ax-orange); }
+  .ax-tab:focus-visible { outline: 3px solid rgba(217,120,45,.5); outline-offset: 2px; }
+  .ax-tab[aria-selected="true"] { background: var(--ax-purple); border-color: var(--ax-purple); color: #fff; }
+  .ax-tab[aria-selected="true"] small { color: #eadfe7; }
+  .ax-panel {
+    border: 1px solid var(--ax-line); border-top: 5px solid var(--ax-purple); border-radius: 10px;
+    padding: 1.25rem 1.5rem; background: #fff; box-shadow: 0 2px 10px rgba(14,36,49,.06);
+    margin-bottom: 1.5rem; scroll-margin-top: 5rem;
+  }
+  .js .ax-panel { animation: ax-in .35s ease; }
+  .js .ax-panel[hidden] { display: none; }
+  @keyframes ax-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .ax-panel__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .75rem; margin-bottom: .75rem; }
+  .ax-panel__name { margin: 0 !important; padding: 0 !important; border: 0 !important; font-size: 1.6rem; color: var(--ax-ink); }
+  .ax-panel__role { color: var(--ax-purple); font-weight: 600; }
+  .ax-chip { font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .15rem .55rem; border-radius: 999px; }
+  .ax-chip--machine { background: var(--ax-soft); color: var(--ax-ink); }
+  .ax-chip--status { background: var(--ax-gold); color: var(--ax-ink); }
+  .ax-panel p { font-size: 1rem; margin: 0 0 1rem; }
+  .ax-panel__h { font-size: .75rem !important; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ax-muted); margin: 1rem 0 .4rem !important; }
+  .ax-feats { margin: 0 0 1rem; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .6rem; }
+  .ax-feats li { margin: 0; padding: .6rem .75rem .6rem 2rem; position: relative; background: var(--ax-soft); border-radius: 8px; font-size: .9rem; }
+  .ax-feats li::before { content: "✓"; position: absolute; left: .7rem; top: .55rem; color: var(--ax-green); font-weight: 700; }
+  .ax-panel__links { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .ax-empty { color: var(--ax-muted); font-style: italic; }
+  @media (max-width: 40em) {
+    .ax-node { min-width: 6.25rem; padding: .5rem .6rem; }
+    .ax-tier { gap: .6rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .js .ax-panel { animation: none; }
+    button.ax-node, .ax-tab { transition: none; }
+  }
+</style>
+
+<div class="ax" id="agents-explorer">
+
+  <!-- Ecosystem map -->
+  <div class="ax-map" aria-label="Map of the Cam-BIO agent ecosystem">
+    <svg class="ax-map__svg" aria-hidden="true"></svg>
+
+    <div class="ax-tier">
+      <div class="ax-node ax-node--human" data-node="human">
+        <span class="ax-node__name">Scientist</span>
+        <span class="ax-node__sub">voice / chat</span>
+      </div>
+    </div>
+
+    <div class="ax-tier">
+      <span class="ax-tier__label">Director &amp; support</span>
+      {% for a in director %}
+      <button type="button" class="ax-node ax-node--director" data-node="{{ a.id }}" data-select="{{ a.id }}" data-link="human">
+        <span class="ax-node__name">{{ a.name }}</span>
+        <span class="ax-node__sub">{{ a.role }}</span>
+      </button>
+      {% endfor %}
+      {% for a in support %}
+      <button type="button" class="ax-node" data-node="{{ a.id }}" data-select="{{ a.id }}" data-link="{{ director.first.id }}">
+        <span class="ax-node__name">{{ a.name }}</span>
+        <span class="ax-node__sub">{{ a.role }}</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="ax-tier">
+      <span class="ax-tier__label">Robot agents</span>
+      {% for a in robots %}
+      <button type="button" class="ax-node" data-node="{{ a.id }}" data-select="{{ a.id }}" data-link="{{ director.first.id }}">
+        <span class="ax-node__name">{{ a.name }}</span>
+        <span class="ax-node__sub">{{ a.machine }}</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    {% assign idle = page.equipment | where_exp: "e", "e.agent == nil" %}
+    {% if idle.size > 0 %}
+    <div class="ax-tier">
+      <span class="ax-tier__label">Lab equipment without an agent yet</span>
+      {% for e in idle %}
+      <div class="ax-node ax-node--idle">{{ e.name }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="ax-legend">
+      <span>coordinates / dispatches</span>
+      <span class="is-dashed">shares inventory &amp; capabilities</span>
+    </div>
+  </div>
+
+  <!-- Selector -->
+  <div class="ax-tabs" role="tablist" aria-label="Agents">
+    {% for a in agents %}
+    <button type="button" class="ax-tab" role="tab" id="tab-{{ a.id }}" aria-controls="agent-{{ a.id }}" aria-selected="false" tabindex="-1" data-select="{{ a.id }}">
+      {{ a.name }}<small>{{ a.role }}</small>
+    </button>
+    {% endfor %}
+  </div>
+
+  {% for a in agents %}
+  <section class="ax-panel" role="tabpanel" id="agent-{{ a.id }}" aria-labelledby="tab-{{ a.id }}">
+    <div class="ax-panel__head">
+      <h2 class="ax-panel__name">{{ a.name }}</h2>
+      <span class="ax-panel__role">{{ a.role }}</span>
+      <span class="ax-chip ax-chip--machine">{{ a.machine }}</span>
+      {% if a.status and a.status != "" %}<span class="ax-chip ax-chip--status">{{ a.status }}</span>{% endif %}
+    </div>
+    {% if a.summary and a.summary != "" %}
+    <p>{{ a.summary }}</p>
+    {% else %}
+    <p class="ax-empty">Description coming soon.</p>
+    {% endif %}
+    {% if a.features.size > 0 %}
+    <h3 class="ax-panel__h">What {{ a.name }} can do</h3>
+    <ul class="ax-feats">
+      {% for f in a.features %}<li>{{ f }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% if a.repo != "" or a.demo != "" %}
+    <div class="ax-panel__links">
+      {% if a.repo != "" %}<a class="btn btn--primary" href="{{ a.repo }}">Repository</a>{% endif %}
+      {% if a.demo != "" %}<a class="btn btn--inverse" href="{{ a.demo }}">Demos</a>{% endif %}
+    </div>
+    {% endif %}
+  </section>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('agents-explorer');
+  if (!root) return;
+  root.classList.add('js');
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('.ax-tab'));
+  var panels = root.querySelectorAll('.ax-panel');
+  var nodes = root.querySelectorAll('button.ax-node');
+  var map = root.querySelector('.ax-map');
+  var svg = root.querySelector('.ax-map__svg');
+  var ids = tabs.map(function (t) { return t.dataset.select; });
+  var current = null;
+
+  function select(id, opts) {
+    opts = opts || {};
+    if (ids.indexOf(id) < 0) id = ids[0];
+    current = id;
+    tabs.forEach(function (t) {
+      var on = t.dataset.select === id;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      if (on && opts.focus) t.focus();
+    });
+    panels.forEach(function (p) { p.hidden = p.id !== 'agent-' + id; });
+    nodes.forEach(function (n) { n.classList.toggle('is-active', n.dataset.node === id); });
+    highlight(id);
+    if (opts.hash !== false && history.replaceState) history.replaceState(null, '', '#' + id);
+    if (opts.scroll) document.getElementById('agent-' + id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  root.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-select]');
+    if (!b) return;
+    select(b.dataset.select, { scroll: b.classList.contains('ax-node') });
+  });
+
+  // arrow-key navigation between tabs
+  root.querySelector('.ax-tabs').addEventListener('keydown', function (e) {
+    var i = ids.indexOf(current), n = ids.length;
+    var next = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1, ArrowUp: i - 1, Home: 0, End: n - 1 }[e.key];
+    if (next === undefined) return;
+    e.preventDefault();
+    select(ids[(next + n) % n], { focus: true });
+  });
+
+  // draw connector lines between map nodes
+  function center(el, box, edge) {
+    var r = el.getBoundingClientRect();
+    return { x: r.left + r.width / 2 - box.left, y: (edge === 'top' ? r.top : r.bottom) - box.top };
+  }
+  function draw() {
+    var box = map.getBoundingClientRect();
+    svg.setAttribute('viewBox', '0 0 ' + box.width + ' ' + box.height);
+    var out = '';
+    root.querySelectorAll('[data-link]').forEach(function (el) {
+      var parent = root.querySelector('[data-node="' + el.dataset.link + '"]');
+      if (!parent) return;
+      var from = el.dataset.link, to = el.dataset.node;
+      var a, b, dashed = el.dataset.node === 'iven';
+      if (dashed) { // side-by-side with director: horizontal link
+        var pr = parent.getBoundingClientRect(), er = el.getBoundingClientRect();
+        a = { x: pr.right - box.left, y: pr.top + pr.height / 2 - box.top };
+        b = { x: er.left - box.left, y: er.top + er.height / 2 - box.top };
+        if (Math.abs(a.y - b.y) > 4) { a = center(parent, box, 'bottom'); b = center(el, box, 'top'); }
+      } else {
+        a = center(parent, box, 'bottom'); b = center(el, box, 'top');
+      }
+      var my = (a.y + b.y) / 2;
+      out += '<path data-from="' + from + '" data-to="' + to + '" class="' + (dashed ? 'is-dashed' : '') +
+        '" d="M' + a.x + ',' + a.y + ' C' + a.x + ',' + my + ' ' + b.x + ',' + my + ' ' + b.x + ',' + b.y + '"/>';
+    });
+    svg.innerHTML = out;
+    if (current) highlight(current);
+  }
+  function highlight(id) {
+    svg.querySelectorAll('path').forEach(function (p) {
+      p.classList.toggle('is-hot', p.dataset.to === id || p.dataset.from === id);
+    });
+  }
+
+  var start = (location.hash || '').replace('#', '');
+  select(ids.indexOf(start) >= 0 ? start : ids[0], { hash: false });
+  draw();
+  window.addEventListener('resize', draw);
+  window.addEventListener('load', draw);
+})();
+</script>
