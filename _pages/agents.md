@@ -14,7 +14,11 @@ equipment:
     agent: dotty
   - name: "Tapestation"
   - name: "PIXL colony picker"
-  - name: "Eppendorf Epimotion 5705"
+    agent: pixie
+  - name: "Plate readers"
+    agent: trey
+  - name: "Eppendorf epMotion 5075"
+    agent: steppen
   - name: "Bambu H2C"
     agent: bambi
   - name: "Quantstudio"

@@ -1,0 +1,38 @@
+<!-- Horizontal scrolling photo roll.
+     Data: page front matter `gallery` (same format as the theme's gallery include:
+     url, image_path, alt, title). Usage: include photo-roll.html with an optional caption="..." -->
+{% assign roll = page.gallery %}
+<style>
+  .roll { margin: 1.5rem 0 2rem; }
+  .roll__track {
+    display: flex; gap: 1rem; overflow-x: auto; padding: 0 0 .75rem;
+    scroll-snap-type: x mandatory; scroll-padding: 0 1rem;
+    -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #7E5475 #f0eaee;
+  }
+  .roll__track::-webkit-scrollbar { height: 8px; }
+  .roll__track::-webkit-scrollbar-track { background: #f0eaee; border-radius: 4px; }
+  .roll__track::-webkit-scrollbar-thumb { background: #7E5475; border-radius: 4px; }
+  .roll__item {
+    flex: 0 0 auto; width: min(80%, 26rem); margin: 0; scroll-snap-align: start;
+    border-radius: 10px; overflow: hidden; background: #fff;
+    border: 1px solid #e3e3e3; box-shadow: 0 2px 10px rgba(14,36,49,.06);
+  }
+  .roll__item a { display: block; }
+  .roll__item img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin: 0; }
+  .roll__item figcaption { padding: .5rem .75rem; font-size: .8rem; color: #3a4650; margin: 0; }
+  .roll__caption { text-align: center; font-size: .9em; color: #6b7680; margin-top: .25rem; }
+  .roll__caption em { font-style: italic; }
+</style>
+<div class="roll">
+  <div class="roll__track" tabindex="0" aria-label="{{ include.caption | default: 'Photo roll' }} (scroll horizontally)">
+    {% for img in roll %}
+    <figure class="roll__item">
+      <a href="{{ img.url | default: img.image_path | relative_url }}" title="{{ img.title }}">
+        <img src="{{ img.image_path | relative_url }}" alt="{{ img.alt }}" loading="lazy">
+      </a>
+      {% if img.title %}<figcaption>{{ img.title }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+  {% if include.caption %}<p class="roll__caption"><em>{{ include.caption }}</em></p>{% endif %}
+</div>

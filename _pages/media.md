@@ -9,12 +9,16 @@ gallery:
     image_path: /assets/images/deckphoto.JPG
     alt: "Image of the deck of the automated Opentrons-FLEX robot containing several modules such as thermocyclers, heater blocks, and tubes containing protein crystallization solutions."
     title: "Photo of a HEWL crystallization experiment"
+  - url: /assets/images/otto1.jpg
+    image_path: /assets/images/otto1.jpg
+    alt: "The Opentrons OT-2 robot labeled Otto-1 on a lab bench, its deck holding a tube block, a crystallization plate and a tip rack, set up for a crystallization gradient."
+    title: "Otto-1 with a crystallization gradient setup"
 ---
 
 
 ## Photos
 
-{% include gallery caption="Photos of the setup" %}
+{% include photo-roll.html caption="Photos of the setup" %}
 
 ## Videos
 

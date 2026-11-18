@@ -13,23 +13,33 @@ We have a growing library of experimental protocols we are automating at Colorad
 ![full]({{ '/assets/images/protein_crystallization_example.png' | relative_url }})
 {: .full}
 
-The growth of crystals is a valuable experiment for structure exploration and only occurs under very specific conditions that can be difficult to achieve, even in a lab setting. Because of this, crystals are grown in plates where concentrations can be iterated across a gradient in order to boost the chances of encompassing the ideal concentrations with more certainty. Setting up crystal plates is arduous and requires a lot of pipetting of micro volumes. Using the OpenTrons robot allows researchers to reduce time spent on rote procedures, and work instead on experimental design.
-
-
+The growth of crystals is a valuable experiment for structure elucidation and requires specific conditions that can be difficult to achieve, even in a lab setting with careful experimentalists. Because of this, crystals are grown in plates where concentrations can be iterated across a gradient or in replicate in order to boost the chances of containing the ideal concentrations for crystal growth. Setting up crystal plates is arduous and requires a lot of pipetting of micro volumes making it a perfect candidate for automation! Using our combination of liquid handlers allows researchers to perform crystallization condition screens and mass crystallization production without cramping their hand with thousands of pipette moves.
 
 ## Cell-free Translation
 
-![full]({{ '/assets/images/photo_placeholder.png' | relative_url }})
-{: .full}
+**Coming soon!**
+{: .notice--warning style="text-align: center;"}
 
 
 ## Duckweed Growth
 
-![full]({{ '/assets/images/photo_placeholder.png' | relative_url }})
-{: .full}
+**Coming soon!**
+{: .notice--warning style="text-align: center;"}
 
 
 ## Protein Purification
 
-![full]({{ '/assets/images/photo_placeholder.png' | relative_url }})
-{: .full}
+**Coming soon!**
+{: .notice--warning style="text-align: center;"}
+
+
+## Automated Golden Gate Assembly
+
+**Coming soon!**
+{: .notice--warning style="text-align: center;"}
+
+
+## Automated PCR
+
+**Coming soon!**
+{: .notice--warning style="text-align: center;"}

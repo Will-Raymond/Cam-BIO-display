@@ -25,32 +25,58 @@
         - "Keeps track of equipment and its maintence schedule"
         - "Provides lists of resources for experiments and tracks usage"
         - "Searchable index of laboratory equipment and SDS sheets"
-    - title: "First draft Director agent - Cam"
+    - title: "First draft director agent - Cam"
       items:
         - "Sees the entire lab inventory and eqiupment list to plan protocol capabilities"
         - "Works with a human scientist to guide experimental runs and statuses"
         - "Keeps track of all experiments run and results generated" 
+    - title: "Large agent validation sandbox"
+      items:
+        - "Code hundreds of simulated protocols for agents to run through and evaluate performances"
+
 - term: "Spring 2027"
   start: 2027-01-01
   end: 2027-05-14
-  goals: []
+  goals: 
+    - title: "Larger repitore of laboratory experiments"
+      items:
+        - "Validated protocols for large scale B2H, duckweed growth, plasmid purfication, and golden gate assembly"
+        - "Scheduling and pricing model for using the setup"
+    - title: "Multimachine automation development"
+      items:
+        - "Start to tie machines together, remove the need for people to move materials and plates for some experiments"
 
 - term: "Summer 2027"
   start: 2027-05-15
   end: 2027-08-15
-  goals: []
+  goals: 
+    - title: "Usability stage"
+      items:
+        - "Collect feedback from first set of users on Agent usefulness and capabilities"
+        - "Integrate feedback into Agents"
+        - "Reevaluate protocol performances and optimize for usability"
 
 - term: "Fall 2027"
   start: 2027-08-16
   end: 2027-12-31
-  goals: []
+  goals: 
+    - title: "Milestone 1: 3-4 Scientific publications enabled by large scale experiments run on the setup"
 
 - term: "Spring 2028"
   start: 2028-01-01
   end: 2028-05-14
-  goals: []
+  goals: 
+    - title: "Longevity stage"
+      items:
+        - "Future proof the setup for biosecurity, for usability, and for agent choices"
 
 - term: "Summer 2028"
   start: 2028-05-15
   end: 2028-08-15
-  goals: []
+  goals: 
+    - title: "Wider adoption push"
+      items:
+      - "Helps locate items across the lab spaces"
+      - "Keeps track of equipment and its maintence schedule"
+      - "Provides lists of resources for experiments and tracks usage"
+      - "Searchable index of laboratory equipment and SDS sheets"

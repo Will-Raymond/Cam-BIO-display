@@ -40,3 +40,36 @@ article.page {
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+/* ---------- Lightbox (Magnific Popup) fixes ----------
+   The theme JS closes the popup after a 500ms `removalDelay` meant for a
+   zoom/fade animation, but ships no CSS for it — so the popup sat frozen for
+   half a second after clicking ×, which felt like the click didn't register.
+   These rules supply the fade so closing responds immediately. */
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transform: scale(.92);
+  transition: opacity .2s ease-out, transform .2s ease-out;
+}
+.mfp-zoom-in.mfp-bg { opacity: 0; transition: opacity .2s ease-out; }
+.mfp-zoom-in.mfp-ready .mfp-with-anim { opacity: 1; transform: scale(1); }
+.mfp-zoom-in.mfp-ready.mfp-bg { opacity: .8; }
+.mfp-zoom-in.mfp-removing .mfp-with-anim { opacity: 0; transform: scale(.92); }
+.mfp-zoom-in.mfp-removing.mfp-bg { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .mfp-zoom-in .mfp-with-anim, .mfp-zoom-in.mfp-bg { transition: none; }
+}
+
+/* Replace the zoom-out (magnifier "−") cursor: clicking the image steps to the
+   next photo, and × / clicking outside closes, so use ordinary cursors. */
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close { cursor: default; }
+.mfp-zoom-out-cur .mfp-img,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close,
+.mfp-zoom-out-cur .mfp-arrow { cursor: pointer; }
+
+/* No focus box on the × / arrow buttons when clicked with a mouse or tap.
+   Keyboard users still get an outline (:focus-visible) so they can see where they are. */
+.mfp-close, .mfp-arrow { -webkit-tap-highlight-color: transparent; }
+.mfp-close:focus, .mfp-arrow:focus { outline: none; box-shadow: none; }
+.mfp-close:focus-visible, .mfp-arrow:focus-visible { outline: 2px solid rgba(255,255,255,.7); outline-offset: 2px; }

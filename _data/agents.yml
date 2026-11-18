@@ -85,3 +85,42 @@
   features: []
   repo: ""
   demo: ""
+
+- id: pixie
+  name: "Pixie"
+  role: "Colony picking"
+  tier: robot
+  machine: "PIXL colony picker"
+  status: "Planned"
+  summary: >-
+    Pixie will be our agent for the PIXL colony picker, setting up and
+    dispatching colony picking runs.
+  features: []
+  repo: ""
+  demo: ""
+
+- id: trey
+  name: "Trey"
+  role: "Plate reading"
+  tier: robot
+  machine: "Plate readers"
+  status: "Planned"
+  summary: >-
+    Trey will be our agent for the lab's plate readers, dispatching reads and
+    collecting the results.
+  features: []
+  repo: ""
+  demo: ""
+
+- id: steppen
+  name: "Steppen"
+  role: "Liquid handling"
+  tier: robot
+  machine: "Eppendorf epMotion 5075"
+  status: "Planned"
+  summary: >-
+    Steppen will be our agent for the Eppendorf epMotion liquid handler,
+    designing and dispatching its protocols.
+  features: []
+  repo: ""
+  demo: ""
