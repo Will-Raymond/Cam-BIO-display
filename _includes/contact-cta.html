@@ -1,0 +1,120 @@
+<!-- "Contact us" email card. Used on /contact/ and on the home page feature row (`- cta: contact`). -->
+<style>
+  .ab-cta {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem;
+    margin: 0 0 3rem; padding: 1.5rem 1.75rem; border-radius: 12px;
+    background: linear-gradient(135deg, #7E5475, #5e3d57); color: #fff;
+  }
+  .ab-cta h2 { margin: 0 0 .35rem !important; padding: 0 !important; border: 0 !important; color: #fff; font-size: 1.4rem; }
+  .ab-cta p { margin: 0; font-size: .95rem; color: #f1e9ef; max-width: 34rem; }
+  .ab-cta .btn { background: #FFC038; color: #0e2431 !important; font-weight: 700; border: 0; white-space: nowrap; }
+  .ab-cta .btn:hover { background: #ffd06b; }
+  .ab-cta__actions { display: flex; flex-wrap: wrap; align-items: stretch; gap: .5rem; }
+  .ab-cta .ab-cta__actions .btn { margin: 0; display: inline-flex; align-items: center; }
+  /* The theme stretches every feature-card button over the whole card (a.btn::before, inset 0),
+     which put the "Email us" link on top of the copy button. Turn that off for this card. */
+  .ab-cta .ab-cta__actions a.btn::before { content: none; display: none; }
+  .ab-cta .ab-copy {
+    position: relative; display: inline-flex; align-items: center; gap: .45rem; margin: 0;
+    background: transparent; color: #fff !important; border: 2px solid rgba(255,255,255,.7);
+    font-weight: 600; white-space: nowrap; cursor: pointer;
+    transition: background .2s, border-color .2s;
+  }
+  .ab-cta .ab-copy:hover, .ab-cta .ab-copy:focus-visible { background: rgba(255,255,255,.15); border-color: #fff; }
+  .ab-cta .ab-copy.is-copied { border-color: #82C503; background: rgba(130,197,3,.18); animation: ab-pop .4s ease; }
+  .ab-cta .ab-copy.is-copied i { color: #82C503; animation: ab-check .45s cubic-bezier(.3,1.6,.5,1); }
+  /* floating "Copied!" bubble */
+  .ab-copy__toast {
+    position: absolute; left: 50%; bottom: 100%; margin-bottom: .5rem;
+    padding: .25rem .6rem; border-radius: 6px; background: #82C503; color: #0e2431;
+    font-size: .8rem; font-weight: 700; pointer-events: none; white-space: nowrap;
+    opacity: 0; transform: translate(-50%, 6px);
+  }
+  .ab-copy__toast::after {
+    content: ""; position: absolute; left: 50%; top: 100%; margin-left: -5px;
+    border: 5px solid transparent; border-top-color: #82C503;
+  }
+  .ab-copy.is-copied .ab-copy__toast { animation: ab-toast 1.8s ease forwards; }
+  /* narrow card: smaller buttons so both fit side by side on one row */
+  .ab-cta--compact .ab-cta__actions { flex-wrap: nowrap; gap: .4rem; }
+  .ab-cta--compact .ab-cta__actions .btn { font-size: .8rem; padding: .55em .9em; margin: 0; }
+  .ab-cta--compact .ab-copy { gap: .35rem; border-width: 1.5px; }
+  /* adapt to the card's own width (the theme's columns get very narrow on mid-size screens) */
+  .ab-cta--compact { container-type: inline-size; padding: 1.25rem; }
+  .ab-cta--compact p { overflow-wrap: anywhere; }
+  @container (max-width: 230px) {
+    .ab-cta__actions .ab-copy__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .ab-cta--compact .ab-cta__actions .btn { font-size: .75rem; padding: .55em .75em; }
+  }
+  @container (max-width: 130px) {
+    .ab-cta--compact .ab-cta__actions { flex-wrap: wrap; }
+  }
+  @keyframes ab-pop { 0% { transform: scale(1); } 40% { transform: scale(1.08); } 100% { transform: scale(1); } }
+  @keyframes ab-check { 0% { transform: scale(0) rotate(-45deg); } 100% { transform: scale(1) rotate(0); } }
+  @keyframes ab-toast {
+    0% { opacity: 0; transform: translate(-50%, 6px); }
+    15% { opacity: 1; transform: translate(-50%, -4px); }
+    75% { opacity: 1; transform: translate(-50%, -4px); }
+    100% { opacity: 0; transform: translate(-50%, -14px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ab-cta .ab-copy.is-copied, .ab-cta .ab-copy.is-copied i { animation: none; }
+    .ab-copy.is-copied .ab-copy__toast { animation: none; opacity: 1; transform: translate(-50%, -4px); }
+  }
+  /* compact version inside a feature-row column */
+  .ab-cta--compact { flex-direction: column; align-items: flex-start; justify-content: center; margin: 0; height: 100%; }
+</style>
+{% assign cta_email = "wsraymon@rams.colostate.edu" %}
+<div class="ab-cta{% if include.compact %} ab-cta--compact{% endif %}">
+  <div>
+    <h2{% unless include.compact %} id="contact-us"{% endunless %}>Contact us!</h2>
+    <p>Interested in using automation at Cam-BIO for your experiment? Send us an email. (A shared cambio@colostate.edu address is coming soon.)</p>
+  </div>
+  <div class="ab-cta__actions">
+    <a class="btn btn--large" href="mailto:{{ cta_email }}">Email us</a>
+    <button type="button" class="btn btn--large ab-copy" data-copy="{{ cta_email }}" aria-label="Copy email address {{ cta_email }}">
+      <i class="fa-regular fa-copy" aria-hidden="true"></i><span class="ab-copy__label">Copy email</span>
+      <span class="ab-copy__toast" aria-hidden="true">Copied!</span>
+    </button>
+    <span class="ab-copy__status" role="status" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></span>
+  </div>
+</div>
+<script>
+(function () {
+  if (window.__abCopyBound) return;   // card can appear more than once per page
+  window.__abCopyBound = true;
+  function fallback(text) {
+    var t = document.createElement('textarea');
+    t.value = text; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+    document.body.appendChild(t); t.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(t);
+    return ok ? Promise.resolve() : Promise.reject();
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.ab-copy');
+    if (!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var text = b.dataset.copy;
+    var p = navigator.clipboard && window.isSecureContext
+      ? navigator.clipboard.writeText(text).catch(function () { return fallback(text); })
+      : fallback(text);
+    var icon = b.querySelector('i'), label = b.querySelector('.ab-copy__label');
+    var status = b.parentNode.querySelector('.ab-copy__status');
+    p.then(function () {
+      b.classList.remove('is-copied'); void b.offsetWidth;   // restart the animation on repeat clicks
+      if (icon) icon.className = 'fa-solid fa-check';
+      label.textContent = 'Copied!'; b.classList.add('is-copied');
+      if (status) status.textContent = 'Email address copied to clipboard';
+      clearTimeout(b._t);
+      b._t = setTimeout(function () {
+        if (icon) icon.className = 'fa-regular fa-copy';
+        label.textContent = 'Copy email'; b.classList.remove('is-copied');
+        if (status) status.textContent = '';
+      }, 2000);
+    }, function () {
+      label.textContent = text;   // couldn't copy: leave the address showing so it can be selected by hand
+    });
+  });
+})();
+</script>
