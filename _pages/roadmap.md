@@ -3,6 +3,6 @@ title: "Roadmap"
 permalink: /roadmap/
 ---
 
-Where Cam-BIO is headed, semester by semester through Summer 2028. Scroll to follow the timeline.
+Our scientific goals, semester by semester through Summer '28. 
 
 {% include roadmap-timeline.html %}

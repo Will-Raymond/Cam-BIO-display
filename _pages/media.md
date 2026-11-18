@@ -12,4 +12,11 @@ gallery:
 ---
 
 
+## Photos
+
 {% include gallery caption="Photos of the setup" %}
+
+## Videos
+
+{% include video id="DDpNAFTLFr0" provider="youtube" %}
+<p style="text-align: center; font-size: .9em; color: #6b7680; margin-top: .5em;"><em>Cam-BIO director agent demo - October 2026</em></p>

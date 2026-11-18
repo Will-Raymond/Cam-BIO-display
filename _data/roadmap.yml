@@ -7,25 +7,29 @@
   start: 2026-05-15
   end: 2026-08-15
   goals:
-    - title: "Full integration with OpenTrons Flex"
+    - title: "First AI agent integration with OpenTrons Flex and OT-2s"
       items:
         - "OpenTrons Flex UI + interactive protocol workflow"
     - title: "Protein crystallization protocols"
       items:
         - "Miniaturization with iDot plates"
         - "Validated protocols for gentle pipetting and accurate VLE crystallization with CrysChem plates"
-    - title: "Cell free protein translation protocols"
-    - title: "Lab inventory agent"
-      items:
-        - "Integration with agent UIs to see current lab capabilities"
-        - "Help scientists locate equipment around the lab"
-        - "Searchable index of manuals of laboratory equipment and SDS sheets"
 
 - term: "Fall 2026"
   start: 2026-08-16
   end: 2026-12-31
-  goals: []
-
+  goals: 
+    - title: "Lab inventory agent"
+      items:
+        - "Helps locate items across the lab spaces"
+        - "Keeps track of equipment and its maintence schedule"
+        - "Provides lists of resources for experiments and tracks usage"
+        - "Searchable index of laboratory equipment and SDS sheets"
+    - title: "First draft Director agent - Cam"
+      items:
+        - "Sees the entire lab inventory and eqiupment list to plan protocol capabilities"
+        - "Works with a human scientist to guide experimental runs and statuses"
+        - "Keeps track of all experiments run and results generated" 
 - term: "Spring 2027"
   start: 2027-01-01
   end: 2027-05-14
