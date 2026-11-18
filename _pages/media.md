@@ -18,7 +18,7 @@ gallery:
 
 ## Photos
 
-{% include photo-roll.html caption="Photos of the setup" %}
+{% include photo-roll.html %}
 
 ## Videos
 
