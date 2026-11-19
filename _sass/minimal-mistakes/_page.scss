@@ -18,11 +18,16 @@
   @include breakpoint($x-large) {
     max-width: $x-large;
   }
+
+  // phones: keep the decorative strip but give it half the room
+  @include breakpoint(max-width $medium - 1px) {
+    margin-left: 10%;
+  }
 }
 
 
 .main__left-decoration{
-  background-image: url('../images/sidebar_left.png');
+  background-image: url('../images/sidebar_left.jpg');
   background-repeat: repeat-y;
   background-size: 350px;
   margin-top: -10%;
@@ -30,6 +35,10 @@
   height: 100%;
   position: absolute;
   bottom: 0;
+
+  @include breakpoint(max-width $medium - 1px) {
+    width: 8.5%;
+  }
 }
 
 
